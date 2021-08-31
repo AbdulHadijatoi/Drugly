@@ -317,6 +317,10 @@ body {
     width: 80px;
 }
 
+.w76 {
+    width: 80px;
+}
+
 .w90 {
     width: 90px;
 }
@@ -3129,6 +3133,9 @@ a:hover {
     }
     .sm_w800 {
         width: 800px;
+    }
+    .sm_w30 {
+        width: 30px;
     }
     .sm_w850 {
         width: 850px;
