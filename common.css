@@ -293,6 +293,10 @@ body {
     width: 40px;
 }
 
+.w43 {
+    width: 43px;
+}
+
 .w45 {
     width: 45px;
 }
@@ -2588,6 +2592,9 @@ a:hover {
     .sm_30-width {
         width: 30%;
     }
+    .sm_33-width {
+        width: 33%;
+    }
     .sm_40-width {
         width: 40%;
     }
@@ -3019,6 +3026,9 @@ a:hover {
     }
     .sm_w100 {
         width: 100px;
+    }
+    .sm_w31 {
+        width: 31px;
     }
     .sm_w110 {
         width: 110px;
