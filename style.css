@@ -1,0 +1,119 @@
+header,
+main,
+footer {
+    width: 100%;
+}
+
+header,
+footer {
+    background-color: var(--dark-grey);
+}
+
+header {
+    min-height: 64px;
+}
+
+footer {
+    min-height: 149px;
+}
+
+header .content {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .content ul li a {
+    color: var(--green2);
+}
+
+header #mobile_nav {
+    background-color: var(--dark-grey);
+    height: 0px;
+    top: 64px;
+    overflow: hidden;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+header #mobile_nav li:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header #mobile_nav li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-grey);
+    height: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header #mobile_nav li:hover {
+    filter: brightness(110%);
+}
+
+header #mobile_nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--green2);
+    height: 100%;
+}
+
+main section {
+    width: 90%;
+}
+
+main .input-box {
+    height: 56px;
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.06);
+}
+
+main .input-box input[type="email"],
+main .input-box input[type="text"] {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0px 20px;
+}
+
+main input[type=checkbox] {
+    border: 1px solid var(--dark-grey);
+    width: 17px;
+    height: 17px;
+}
+
+main .input-box a {
+    display: flex;
+    width: 150px;
+    height: 100%;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green2);
+    color: var(--light-text);
+}
+
+main .wide-card {
+    background-color: var(--light-text);
+}
+
+footer .content {
+    width: 90%;
+    height: 100%;
+}
