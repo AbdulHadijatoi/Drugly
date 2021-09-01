@@ -116,12 +116,37 @@ main #cardsContainer {
     background-position: center;
 }
 
-main .card-2 {
+main .card-2,
+main #card3,
+main #card3b,
+main .para,
+main .heading1,
+main #contactDetails,
+main #contactForm {
     transition: all 3s ease;
 }
 
-main .card-2.inview {
-    opacity: 1 !important;
+main #para11.inview,
+main #para12.inview,
+main #para13.inview,
+main #para31.inview,
+main .heading1.inview,
+main #para21.inview {
+    transform: translateX(0%);
+}
+
+main .heading1,
+main #para21 {
+    transform: translateX(20%);
+    opacity: 0;
+}
+
+main #para11,
+main #para12,
+main #para13,
+main #para31 {
+    transform: translateX(-20%);
+    opacity: 0;
 }
 
 main #card21 {
@@ -147,6 +172,33 @@ main #card23.inview {
 main #card21.inview,
 main #card23.inview {
     margin: 0px;
+}
+
+main #contactDetails,
+main #contactForm {
+    opacity: 0;
+}
+
+main #contactForm {
+    transform: translateY(20%);
+}
+
+main #contactDetails {
+    transform: translateY(-20%);
+}
+
+main .card-2.inview,
+main #card3.inview,
+main #card3b.inview,
+main .para.inview,
+main .heading1.inview {
+    opacity: 1 !important;
+}
+
+main #contactDetails.inview,
+main #contactForm.inview {
+    opacity: 1;
+    transform: translateY(0%);
 }
 
 main #tableSection {

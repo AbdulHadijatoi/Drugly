@@ -27,6 +27,12 @@ mobile_nav.onload = function() {
 // ---------------------------
 // ---------------------------
 var card2 = document.querySelectorAll('.card-2');
+var card3 = document.getElementById('card3');
+var card3b = document.getElementById('card3b');
+var contactForm = document.getElementById('contactForm');
+var contactDetails = document.getElementById('contactDetails');
+var para = document.querySelectorAll('.para');
+var heading1 = document.querySelector('.heading1');
 var tableSection = document.getElementById('tableSection');
 observer = new IntersectionObserver(function(entries) {
     // console.log('entry:', entry);
@@ -51,4 +57,15 @@ if (card2.length > 0) {
         observer.observe(card2[i]);
     }
 }
+
+if (para.length > 0) {
+    for (let i = 0; i < para.length; i++) {
+        observer.observe(para[i]);
+    }
+}
 observer.observe(tableSection);
+observer.observe(card3);
+observer.observe(card3b);
+observer.observe(heading1);
+observer.observe(contactForm);
+observer.observe(contactDetails);
