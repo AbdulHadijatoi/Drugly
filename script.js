@@ -84,7 +84,7 @@ $(function() {
     setTimeout(function() {
         $('#modal1').show();
         $('#modal2').show();
-    }, 60000);
+    }, 30000);
     $('#btnModal1').click(function() {
         $('#modal1').hide();
         // $('#text2').show();
