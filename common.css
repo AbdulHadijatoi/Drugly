@@ -321,6 +321,10 @@ body {
     width: 80px;
 }
 
+.w84 {
+    width: 84px;
+}
+
 .w76 {
     width: 80px;
 }
@@ -713,6 +717,10 @@ body {
     line-height: 25px;
 }
 
+.line-height-26 {
+    line-height: 26px;
+}
+
 .line-height-32 {
     line-height: 32px;
 }
@@ -921,6 +929,10 @@ body {
     height: 55px !important;
 }
 
+.h56 {
+    height: 56px;
+}
+
 .h60 {
     height: 60px !important;
 }
@@ -955,6 +967,10 @@ body {
 
 .h120 {
     height: 120px;
+}
+
+.h123 {
+    height: 123px;
 }
 
 .min-h120 {
@@ -2120,7 +2136,7 @@ main {
 }
 
 .bg-green {
-    background-color: #1DB953;
+    background-color: var(--green2);
 }
 
 .bg-red {
@@ -2257,6 +2273,14 @@ a:hover {
 
 .hover-effect:hover {
     filter: brightness(130%);
+}
+
+.button-effect:hover {
+    filter: brightness(110%);
+}
+
+.button-effect:active {
+    filter: brightness(90%);
 }
 
 .bg-cover-center {
@@ -2508,11 +2532,20 @@ a:hover {
 }
 
 @media screen and (max-width: 800px) {
+    .sm_text-dark-grey {
+        color: var(--dark-grey);
+    }
     .sm_border-none {
         border: none !important;
     }
     .sm_border-radious-10 {
         border-radius: 10px;
+    }
+    .sm_border-radious-15 {
+        border-radius: 15px;
+    }
+    .sm_border-radious-20 {
+        border-radius: 20px;
     }
     body {
         overflow-x: hidden;
@@ -2788,10 +2821,13 @@ a:hover {
         height: 800px;
     }
     .sm_display-none {
-        display: none !important;
+        display: none;
     }
     .sm_display-block {
-        display: block !important;
+        display: block;
+    }
+    .sm_display-flex {
+        display: flex;
     }
     .sm_d-flex {
         display: flex;
@@ -2833,7 +2869,7 @@ a:hover {
         margin-top: 0px !important;
     }
     .sm_mb_0 {
-        margin-bottom: 0px;
+        margin-bottom: 0px !important;
     }
     .sm_p-0 {
         padding: 0px !important;
@@ -3190,7 +3226,7 @@ a:hover {
         font-size: 13px !important;
     }
     .sm_font-size-14 {
-        font-size: 14px;
+        font-size: 14px !important;
     }
     .sm_font-size-15 {
         font-size: 15px;
