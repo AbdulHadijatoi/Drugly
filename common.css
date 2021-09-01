@@ -617,6 +617,10 @@ body {
     width: 661px;
 }
 
+.w66 {
+    width: 66px;
+}
+
 .w700 {
     width: 700px;
 }
@@ -943,6 +947,10 @@ body {
 
 .h65 {
     height: 65px !important;
+}
+
+.h66 {
+    height: 66px;
 }
 
 .h70 {
@@ -1471,6 +1479,10 @@ body {
 
 .ml-5 {
     margin-left: 5px;
+}
+
+.ml-100 {
+    margin-left: 100px;
 }
 
 .ml-130 {
@@ -2724,6 +2736,9 @@ a:hover {
     .sm_h24 {
         height: 24px !important;
     }
+    .sm_h26 {
+        height: 26px;
+    }
     .sm_h30 {
         height: 30px !important;
     }
@@ -3111,6 +3126,9 @@ a:hover {
     .sm_w200 {
         width: 200px;
     }
+    .sm_w26 {
+        width: 26px;
+    }
     .sm_w210 {
         width: 210px;
     }
@@ -3284,6 +3302,9 @@ a:hover {
     }
     .sm_font-size-30 {
         font-size: 30px;
+    }
+    .sm_font-size-32 {
+        font-size: 32px;
     }
     .sm_font-size-35 {
         font-size: 35px;
