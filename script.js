@@ -77,3 +77,20 @@ $(function() {
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
 });
+
+$(function() {
+    $('#modal1').hide();
+    $('#modal2').hide();
+    setTimeout(function() {
+        $('#modal1').show();
+        $('#modal2').show();
+    }, 60000);
+    $('#btnModal1').click(function() {
+        $('#modal1').hide();
+        // $('#text2').show();
+    });
+    $('#btnModal2').click(function() {
+        $('#modal2').hide();
+        // $('#text2').show();
+    });
+});
