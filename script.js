@@ -22,3 +22,33 @@ btn_mobile_menu.addEventListener("click", function() {
 mobile_nav.onload = function() {
     mobile_nav.innerHTML = nav.innerHTML;
 };
+
+
+// ---------------------------
+// ---------------------------
+var card2 = document.querySelectorAll('.card-2');
+var tableSection = document.getElementById('tableSection');
+observer = new IntersectionObserver(function(entries) {
+    // console.log('entry:', entry);
+    // console.log('observer:', observer);
+    for (let i = 0; i < entries.length; i++) {
+        console.log(entries[i].intersectionRatio)
+        if (entries[i].intersectionRatio > 0) { // This should be a value between 0 and 1
+            // 0 means the element is starting to appear in the viewport.
+            // 1 means the element is 100% in the viewport.
+            console.log("in view")
+            entries[i].target.classList.add('inview')
+                // observer.unobserve(entries[i].target); // Use this line if you don't want anything to trigger when scrolling back up.
+        } else {
+            // console.log("out of view")
+            entries[i].target.classList.remove('inview')
+        }
+    }
+});
+
+if (card2.length > 0) {
+    for (let i = 0; i < card2.length; i++) {
+        observer.observe(card2[i]);
+    }
+}
+observer.observe(tableSection);

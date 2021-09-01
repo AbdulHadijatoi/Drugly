@@ -116,6 +116,48 @@ main #cardsContainer {
     background-position: center;
 }
 
+main .card-2 {
+    transition: all 3s ease;
+}
+
+main .card-2.inview {
+    opacity: 1 !important;
+}
+
+main #card21 {
+    transform: scale(50%);
+    margin-right: 150px;
+}
+
+main #card23 {
+    transform: scale(50%);
+    margin-left: 150px;
+}
+
+main #card22 {
+    transform: scale(50%);
+}
+
+main #card22.inview,
+main #card21.inview,
+main #card23.inview {
+    transform: scale(100%);
+}
+
+main #card21.inview,
+main #card23.inview {
+    margin: 0px;
+}
+
+main #tableSection {
+    transition: all 3s ease;
+    transform: rotate3d(-0.1, 1, 0, 90deg);
+}
+
+main #tableSection.inview {
+    transform: rotate3d(0, 1, 0, 0deg);
+}
+
 main .wide-card {
     background-color: var(--light-text);
 }
