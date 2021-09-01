@@ -2325,7 +2325,7 @@ a:hover {
 }
 
 .box-shadow-5px {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
 }
 
 .box-shadow-50-black {
@@ -2559,7 +2559,19 @@ a:hover {
     background-color: #808080;
 }
 
+.hover-zoom {
+    transition: transform 0.5s;
+    /* Animation */
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1);
+}
+
 @media screen and (max-width: 800px) {
+    .sm_overflow-hidden {
+        overflow: hidden;
+    }
     .sm_text-dark-grey {
         color: var(--dark-grey);
     }

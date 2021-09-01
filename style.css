@@ -109,6 +109,13 @@ main .input-box a {
     color: var(--light-text);
 }
 
+main #cardsContainer {
+    background-image: url(assets/svg/d-lines.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 main .wide-card {
     background-color: var(--light-text);
 }
@@ -116,4 +123,10 @@ main .wide-card {
 footer .content {
     width: 90%;
     height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    main #cardsContainer {
+        background-image: url(assets/svg/m-lines.svg);
+    }
 }
