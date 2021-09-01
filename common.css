@@ -89,6 +89,10 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.br-1-white {
+    border: 1px solid white;
+}
+
 .border-01 {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -945,6 +949,10 @@ body {
     height: 70px !important;
 }
 
+.h73 {
+    height: 73px;
+}
+
 .h80 {
     height: 80px !important;
 }
@@ -1075,6 +1083,10 @@ body {
 
 .h470 {
     height: 470px;
+}
+
+.h475 {
+    height: 475px;
 }
 
 .h480 {
@@ -3027,6 +3039,9 @@ a:hover {
     .sm_mt-5 {
         margin-top: 5px !important;
     }
+    .sm_mt-7 {
+        margin-top: 7px !important;
+    }
     .sm_mt-10 {
         margin-top: 10px !important;
     }
@@ -3206,6 +3221,12 @@ a:hover {
     }
     .sm_font-size-5 {
         font-size: 5px;
+    }
+    .sm_font-size-6 {
+        font-size: 6px;
+    }
+    .sm_font-size-7 {
+        font-size: 7px;
     }
     .sm_font-size-8 {
         font-size: 8px;
