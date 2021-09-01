@@ -69,3 +69,11 @@ observer.observe(card3b);
 observer.observe(heading1);
 observer.observe(contactForm);
 observer.observe(contactDetails);
+
+
+$(function() {
+    $(document).scroll(function() {
+        var $nav = $("header");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+});

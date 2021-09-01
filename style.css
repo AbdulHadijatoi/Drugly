@@ -10,7 +10,7 @@ footer {
 }
 
 header {
-    min-height: 64px;
+    height: 64px;
 }
 
 footer {
@@ -68,6 +68,16 @@ header #mobile_nav a {
     height: 100%;
 }
 
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 500ms linear;
+    height: 40px !important;
+}
+
+header.scrolled #topLogo {
+    height: 25px;
+}
+
 main section {
     width: 90%;
 }
@@ -123,7 +133,7 @@ main .para,
 main .heading1,
 main #contactDetails,
 main #contactForm {
-    transition: all 3s ease;
+    transition: all 1.5s ease;
 }
 
 main #para11.inview,
@@ -202,7 +212,7 @@ main #contactForm.inview {
 }
 
 main #tableSection {
-    transition: all 3s ease;
+    transition: all 1.5s ease;
     transform: rotate3d(-0.1, 1, 0, 90deg);
 }
 
