@@ -989,6 +989,10 @@ body {
     height: 123px;
 }
 
+.h126 {
+    height: 126px;
+}
+
 .min-h120 {
     min-height: 120px;
 }
@@ -2562,6 +2566,9 @@ a:hover {
     .sm_border-none {
         border: none !important;
     }
+    .sm_bottom-0 {
+        bottom: 0px;
+    }
     .sm_border-radious-10 {
         border-radius: 10px;
     }
@@ -3125,6 +3132,9 @@ a:hover {
     }
     .sm_w200 {
         width: 200px;
+    }
+    .sm_w20 {
+        width: 20px;
     }
     .sm_w26 {
         width: 26px;
