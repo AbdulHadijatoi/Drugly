@@ -38,17 +38,18 @@ observer = new IntersectionObserver(function(entries) {
     // console.log('entry:', entry);
     // console.log('observer:', observer);
     for (let i = 0; i < entries.length; i++) {
-        console.log(entries[i].intersectionRatio)
+        // console.log(entries[i].intersectionRatio)
         if (entries[i].intersectionRatio > 0) { // This should be a value between 0 and 1
             // 0 means the element is starting to appear in the viewport.
             // 1 means the element is 100% in the viewport.
-            console.log("in view")
+            // console.log("in view")
             entries[i].target.classList.add('inview')
                 // observer.unobserve(entries[i].target); // Use this line if you don't want anything to trigger when scrolling back up.
-        } else {
-            // console.log("out of view")
-            entries[i].target.classList.remove('inview')
         }
+        // else {
+        //     // console.log("out of view")
+        //     entries[i].target.classList.remove('inview')
+        // }
     }
 });
 
@@ -79,13 +80,13 @@ $(function() {
 });
 
 $(function() {
-    // $('#modal1').hide();
+    $('#modal1').hide();
     $('#modal2').hide();
     setTimeout(function() {
-        $('#modal1').show();
+        // $('#modal1').show();
     }, 30000);
     setTimeout(function() {
-        $('#modal2').show();
+        // $('#modal2').show();
     }, 1000);
     $('#btnModal1').click(function() {
         $('#modal1').hide();

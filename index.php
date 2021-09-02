@@ -41,9 +41,7 @@ if((isset($_POST['submit'])))
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
 </head>
-
 <body>
-
     <div id="modal1" class="blur-bg full-width full-height align-in-center  position-fixed" style="z-index: 99;">
         <div class="_90-width margin-auto bg-dark-grey h475 align-in-center position-relative border-radius-30 light-text sm_flex-column">
             <a id="btnModal1" class="cursor-pointer"><img class="w30 position-absolute top-0 right-0 mr-20 mt-20" src="assets/svg/close-ic.svg" alt="close button"></a>
@@ -58,7 +56,7 @@ if((isset($_POST['submit'])))
                     type="button" value="Zapisuję się">
 
                 <div class="w470 sm_full-width justify-content-start sm_mt-15">
-                    <label class="font-size-14 align-in-center sm_font-size-10 light-text sm_font-size-6"><input class="mr-10 br-1-white bg-transparent" type="checkbox"> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
+                    <label class="font-size-14 align-in-center sm_font-size-10 light-text sm_font-size-6"><input class="mr-10 br-1-white bg-transparent" type="checkbox"><label></label> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
                 </div>
             </div>
             <div class="ml-140 sm_display-none"><img class="h73" src="assets/svg/white-ic-4.svg"></div>
@@ -95,7 +93,7 @@ if((isset($_POST['submit'])))
             </div>
         </div>
         <ul id="mobile_nav" class="align-items-center full-width flex-column sm_d-flex position-absolute display-none">
-            <input type="checkbox" id="mobileNavCheck" class="display-none">
+            <input type="checkbox" id="mobileNavCheck" class="display-none"><label></label>
             <li><a href="#">O nas</a></li>
             <li><a href="#">Jak to działa?</a></li>
             <li><a href="#">Dlaczego Drugly?</a></li>
@@ -104,20 +102,20 @@ if((isset($_POST['submit'])))
     </header>
 
     <main class="align-in-center flex-column overflow-hidden">
-        <section class="h900 sm_h750 justify-content-between align-items-center sm_flex-column-reverse sm_justify-content-center">
+        <section class="h800 sm_h750 md_h750 justify-content-between align-items-center sm_flex-column-reverse sm_justify-content-center">
             <div class="_55-width sm_full-width text-dark-grey">
-                <h1 class="font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32">Medyczna marihuana bez wychodzenia z domu! Sprawdź, czy się kwalifikujesz!</h1>
-                <p class="font-size-17 mt-10 sm_font-size-14 sm_line-height-20">Drugly to pierwsza w Polsce w pełni digitalowa klinika specjalizująca się w leczeniu medyczną marihuaną. Ruszamy już wkrótce. </p>
-                <p class="font-size-19 text-green mt-20 sm_font-size-14">Zapisz się już dziś i otrzymaj <strong class="font-size-22 font-weight-bold sm_font-size-18">30% rabatu</strong> na pierwszą wizytę.</p>
-                <div class="input-box w470 sm_full-width sm_h37 sm_mt-15 sm_mb-5">
+                <h1 class="font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 md_font-size-30">Medyczna marihuana bez wychodzenia z domu!<br>Sprawdź, czy się kwalifikujesz!</h1>
+                <p class="font-size-17 mt-10 sm_font-size-14 sm_line-height-20 md_font-size-16">Drugly to pierwsza w Polsce w pełni digitalowa klinika specjalizująca się w leczeniu medyczną marihuaną. Ruszamy już wkrótce. </p>
+                <p class="font-size-19 text-green mt-20 sm_font-size-14 md_font-size-16">Zapisz się już dziś i otrzymaj <strong class="font-size-22 font-weight-bold sm_font-size-18">30% rabatu</strong> na pierwszą wizytę.</p>
+                <div class="input-box w470 sm_full-width sm_h37 sm_mt-15 sm_mb-5 md_w400">
                     <input class="sm_font-size-10" type="email" placeholder="Adres e-mail">
                     <a class="sm_font-size-12 text-decoration-none" href="#">Zapisuję się!</a>
                 </div>
-                <div class="input-box w470 sm_full-width sm_h37 sm_mt-10 sm_mb-5">
+                <div class="input-box w470 sm_full-width sm_h40 sm_mt-10 sm_mb-5 md_w400">
                     <input class="sm_font-size-10" type="text" placeholder="Numer telefony (opcjonalnie)">
                 </div>
-                <div class="w470 sm_full-width justify-content-start sm_mt-15">
-                    <label class="font-size-14 align-in-center sm_font-size-8"><input class="mr-10" type="checkbox"> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
+                <div class="w470 sm_full-width justify-content-start sm_mt-15  md_w400">
+                    <label class="font-size-14 align-in-center sm_font-size-8"><input class="mr-10" type="checkbox"><label></label> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
                 </div>
             </div>
             <div class="_45-width sm_80-width sm_mb-20">
@@ -127,11 +125,10 @@ if((isset($_POST['submit'])))
 
 
         <!-- begins: dotted lines section -->
-        <section class="text-dark-grey">
+        <section class="text-dark-grey mt-50 mb-50 sm_mt-10 md_mt-10 md_scale06 sm_scale10 md_mt_25 md_mb_25">
             <h1 class="full-width font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 text-center">Jak to działa?</h1>
-            <p class="full-width text-center font-size-19 text-green mt-20 sm_font-size-14">Zarejestruj się i otrzymaj receptę w 24h!*</p>
-            <p class="full-width text-center font-size-17 mt-10 sm_font-size-14 sm_line-height-20">To prostsze niż myślisz. Bez zbędnych formalności i wychodzenia z domu.</p>
-            <br><br><br>
+            <p class="full-width text-center font-size-19 text-green mt-10 sm_font-size-16 sm_font-weight-bold sm_mt-0">Zarejestruj się i otrzymaj receptę w 24h!*</p>
+            <p class="full-width text-center font-size-17 mt-10 sm_font-size-14 sm_line-height-20 mb-80 sm_mb-30">To prostsze niż myślisz. Bez zbędnych formalności i wychodzenia z domu.</p>
 
             <div id="cardsContainer" class="full-width flex-column align-items-center">
                 <div class="full-width sm_flex-column justify-content-center align-items-center sm_85-width">
@@ -144,30 +141,38 @@ if((isset($_POST['submit'])))
                     </div>
 
                     <div class="sm_full-width justify-content-end">
-                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 mr-140 ml-140 sm_mr-0 sm_ml-0 sm_mt-30 z-index-3 position-relative hover-zoom sm_w192 sm_h73  sm_p-10">
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-2.svg"></div>
-                            <p class="font-size-19 flex-1 sm_font-size-12">poprawność danychSystem sprawdzi</p>
+                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 mr-140 ml-140 sm_mr-0 sm_ml-0 sm_mt-20 z-index-3 position-relative hover-zoom sm_w192 sm_h73  sm_p-10">
+                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 sm_display-none"><img class="w30 sm_w17" src="assets/svg/ic-2.svg"></div>
+                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-4.svg"></div>
+                            <p class="font-size-19 flex-1 sm_font-size-12 sm_display-none">Dokonaj płatności online</p>
+                            <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">System sprawdzi poprawność danych</p>
                         </div>
                     </div>
                     <div class="sm_full-width justify-content-start">
-                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 sm_mt-30 z-index-3 position-relative hover-zoom sm_w192 sm_h73 sm_p-10">
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div>
-                            <p class="font-size-19 flex-1 sm_font-size-12">Dokonaj płatności online</p>
+                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 sm_mt-20 z-index-3 position-relative hover-zoom sm_w192 sm_h73 sm_p-10">
+                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 sm_display-none"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div>
+                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-2.svg"></div>
+                            <p class="font-size-19 flex-1 sm_font-size-12 sm_display-none">Otrzymasz sms oraz mail z e-receptą i wszelkimi zaleceniami medycznymi</p>
+                            <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Dokonaj płatności online</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="full-width align-in-center mt-100 sm_flex-column sm_mt_0 sm_85-width">
                     <div class="sm_full-width justify-content-end position-relative hover-zoom">
-                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 mr-175 sm_mr-0 sm_mt-30 z-index-3  sm_w192 sm_h73 sm_p-10">
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-4.svg"></div>
-                            <p class="font-size-19 flex-1 sm_font-size-12">skontaktuje się z tobąa w razie potrzeby Lekarz dokona diagnozy,</p>
+                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 mr-175 sm_mr-0 sm_mt-20 z-index-3  sm_w192 sm_h73 sm_p-10">
+                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 sm_display-none"><img class="w30 sm_w17" src="assets/svg/ic-4.svg"></div>
+                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-5.svg"></div>
+                            <p class="font-size-19 flex-1 sm_font-size-12 sm_display-none">System sprawdzi poprawność danych</p>
+                            <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Lekarz dokona diagnozy, a w razie potrzeby skontaktuje się z tobą</p>
                         </div>
                     </div>
                     <div class="sm_full-width justify-content-start sm_overflow-hidden hover-zoom">
-                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 sm_mt-30 z-index-3 position-relative sm_w192 sm_h73 sm_p-10">
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-5.svg"></div>
-                            <p class="font-size-19 flex-1 sm_font-size-12">zaleceniami medycznymiz e-receptą i wszelkimi Otrzymasz sms oraz mail</p>
+                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 sm_mt-20 z-index-3 position-relative sm_w192 sm_h73 sm_p-10">
+                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 sm_display-none"><img class="w30 sm_w17" src="assets/svg/ic-5.svg"></div>
+                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div>
+                            <p class="font-size-19 flex-1 sm_font-size-12 sm_display-none">Lekarz dokona diagnozy, a w razie potrzeby skontaktuje się z tobą</p>
+                            <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Otrzymasz sms oraz mail z e-receptą i wszelkimi zaleceniami medycznymi</p>
                         </div>
                     </div>
                 </div>
@@ -175,10 +180,8 @@ if((isset($_POST['submit'])))
         </section>
         <!-- ends: dotted lines section -->
 
-        <br><br><br><br><br><br><br><br><br><br>
-
-        <section>
-            <h1 class="full-width text-dark-grey font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 text-center align-items-center justify-content-center sm_font-size-22">Dlaczego <img class="m-20 h55 sm_h30" src="assets/svg/logo-2.svg"> ?</h1>
+        <section class="mt-100 sm_mt-50 md_mt_25">
+            <h1 class="full-width text-dark-grey font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 text-center align-items-center justify-content-center sm_font-size-22 mb-40 sm_mb-20">Dlaczego <img class="m-15 h55 sm_h30 vertical-align-middle sm_m-5" src="assets/svg/logo-2.svg"> ?</h1>
             <div class="cards-2-container justify-content-center">
                 <div id="card21" class="card-2 w260 h230 align-in-center flex-column border-radius-30 box-shadow-5px sm_w100 sm_h90 sm_border-radious-10 opacity-0">
                     <img class="w76 sm_w30" src="assets/svg/ic-6.svg" width="76">
@@ -196,73 +199,69 @@ if((isset($_POST['submit'])))
             </div>
         </section>
 
-        <br><br><br>
-        <section id="tableSection" class="_80-width box-shadow-5px align-in-center flex-column text-dark-grey">
-            <div class="bg-dark-grey text-green border-radius-20 full-width h65 justify-content-between font-size-24 sm_font-size-12">
+        <section id="tableSection" class="_80-width box-shadow-5px align-in-center flex-column text-dark-grey mt-80 mb-100 sm_mt-50 border-radius-20">
+            <div class="bg-dark-grey text-green border-radius-20 full-width h65 justify-content-between font-size-24 sm_font-size-12 md_font-size-16">
                 <div class="text-center _30-width full-height align-in-center sm_33-width">Nasza oferta</div>
                 <div class="text-center _40-width full-height align-in-center sm_33-width" style="border-right: 1px solid rgba(255,255,255,0.4); border-left: 1px solid rgba(255,255,255,0.4);">Przykładowa metoda leczenia</div>
                 <div class="text-center _30-width full-height align-in-center sm_33-width">Dostępność w Drugly</div>
             </div>
-            <div class="align-in-center full-width h130 font-size-24 sm_font-size-12 overflow-hidden">
+            <div class="align-in-center full-width h130 font-size-24 sm_font-size-12 md_font-size-16 overflow-hidden">
                 <div class="text-center _30-width full-height align-in-center sm_33-width" style="border-bottom: 1px solid rgba(0,0,0,0.1);">Terapie konopne</div>
                 <div class="text-center _40-width full-height align-in-center sm_33-width" style="border: 1px solid rgba(0,0,0,0.1)">Medyczna marihuana</div>
                 <div class="text-center _30-width full-height align-in-center sm_33-width" style="border-bottom: 1px solid rgba(0,0,0,0.1);"> <img class="w43 sm_w31" src="assets/svg/ic-9.svg"> </div>
             </div>
-            <div class="align-in-center full-width h130 font-size-24 sm_font-size-12 overflow-hidden">
+            <div class="align-in-center full-width h130 font-size-24 sm_font-size-12 md_font-size-16 overflow-hidden">
                 <div class="text-center _30-width full-height align-in-center sm_33-width">Inne</div>
                 <div class="text-center _40-width full-height align-in-center sm_33-width" style="border: 1px solid rgba(0,0,0,0.1); border-top: 0px; border-bottom: 0px;">Tabletki antykoncepcyjne, tabletki 72h „po” Leki nasenne oraz inne leki</div>
                 <div class="text-center _30-width full-height align-in-center sm_33-width"> <img class="w43 sm_w31" src="assets/svg/ic-10.svg"> </div>
             </div>
         </section>
 
-        <br><br><br><br><br><br><br><br><br><br>
-
-        <section class="_80-width justify-content-between">
+        <section class="_80-width justify-content-between mt-50 mb-100 sm_mt-10 sm_mt-80">
             <div class="_50-width sm_full-width justify-content-start flex-column text-dark-grey">
-                <h1 class="heading1 text-dark-grey font-size-40 font-weight-800 sm_font-size-22 sm_line-height-32 sm_font-size-22 sm_full-width sm_text-align-center">Czy marihuana jest legalna?</h1>
-                <br>
+                <h1 class="heading1 text-dark-grey font-size-40 font-weight-800 sm_mb-15 sm_font-size-22 sm_line-height-32 sm_font-size-22 md_font-size-22 sm_full-width sm_text-align-center">Czy marihuana jest legalna?</h1>
 
                 <!-- begins: only for mobile view -->
                 <div class="justify-content-between display-none sm_display-flex">
-                    <div id="card3b" class="w84 box-shadow-5px h123 align-in-center border-radius-20 mr-15 opacity-0">
-                        <img src="assets/svg/graphic-2.svg" width="73">
+                    <div id="card3b" class="w84 box-shadow-5px full-height align-in-center border-radius-20 mr-15 opacity-0">
+                        <img class="w75" src="assets/svg/graphic-2.svg">
                     </div>
-                    <p id="para11" class="para font-size-14 font-weight-300 line-height-30">
+                    <p id="para11" class="para font-size-14 font-weight-300 line-height-30 sm_line-height-25">
                         <strong class="font-size-18">Tak!</strong> Legalizacja marihuany medycznej została przyjęta ustawą w październiku
                         <span class="font-weight-500 text-dark-grey">2017 roku i od tego dnia jest dostępna jako alternatywny środek medyczny.</span> </p>
                 </div>
-                <p id="para12" class="para font-size-14 font-weight-300 line-height-30 display-none sm_display-block">Medyczna marihuana została dopuszczona do leczenia <span class="font-weight-500 text-dark-grey">szerokiej grupy schorzeń</span> między innymi bezsenność, bóle miesiączkowe czy migreny, kiedy klasyczne leki nie przynoszą pożądanych efektów.</p>
+                <p id="para12" class="para font-size-14 font-weight-300 line-height-30 sm_line-height-25 display-none sm_display-block">Medyczna marihuana została dopuszczona do leczenia <span class="font-weight-500 text-dark-grey">szerokiej grupy schorzeń</span> między innymi bezsenność, bóle miesiączkowe czy migreny, kiedy klasyczne leki nie przynoszą pożądanych efektów.</p>
                 <!-- ends: only for mobile view -->
 
-                <p id="para13" class="para font-size-19 font-weight-300 line-height-30 sm_display-none">
+                <p id="para13" class="para font-size-19 font-weight-300 md_font-size-14 line-height-30 sm_line-height-25 sm_display-none">
                     <strong>Tak!</strong> Legalizacja marihuany medycznej została przyjęta ustawą w październiku
                     <strong>2017 roku i od tego dnia jest dostępna jako alternatywny środek medyczny.</strong> Medyczna marihuana została dopuszczona do leczenia szerokiej grupy schorzeń między innymi bezsenność, bóle miesiączkowe czy migreny, kiedy klasyczne
                     leki nie przynoszą pożądanych efektów.</p>
 
-                <p id="para21" class="para font-size-19 font-weight-300 line-height-30 sm_font-size-14 mt-20 sm_mt_0">
+                <p id="para21" class="para font-size-19 font-weight-300 md_font-size-14 line-height-30 sm_line-height-25 sm_font-size-14 md_font-size-14 mt-20 sm_mt_2">
                     <strong class="sm_text-dark-grey">W związku z ustawą, marihuana musi być sprowadzana zza 
 granicy.</strong> Obecnie w Polsce jedynym importerem konopi medycznych jest spółka Spectrum Cannabis. To właśnie ten
                     <strong class="sm_text-dark-grey">legalny i przetestowany produkt przepisują nasi lekarze. </strong>
                 </p>
-                <p id="para31" class="para font-size-19 font-weight-300 line-height-30 sm_font-size-14 mt-20 sm_mt_0">
+                <p id="para31" class="para font-size-19 font-weight-300 line-height-30 sm_line-height-25 sm_font-size-14 md_font-size-14 mt-20 sm_mt_2">
                     W tym momencie leczenie medyczną marihuaną nie jest objęte refundacją NFZ, lecz <strong class="sm_text-dark-grey">legalny zakup jednego gram suszu kosztuje 
 od 40 zł do 60 zł</strong> w zależności od apteki.
                 </p>
             </div>
             <div id="card3" class="_40-width box-shadow-5px h500 align-in-center border-radius-20 sm_display-none opacity-0">
-                <img src="assets/svg/graphic-2.svg" width="350">
+                <img class="w350 md_w250" src="assets/svg/graphic-2.svg">
             </div>
         </section>
-        <br><br><br><br><br><br><br><br><br><br>
-        <section class="_80-width text-dark-grey justify-content-between sm_flex-column mb-100 sm_mb-30">
-            <div id="contactDetails" class="flex-column align-items-start _40-width sm_full-width">
-                <img src="assets/svg/logo-3.svg" height="40">
+
+        <section class="_80-width text-dark-grey justify-content-between md_flex-column mb-100 sm_mb-30 mt-100 sm_mt-10 md_mt_25 md_full-width md_align-items-center">
+            <div id="contactDetails" class="flex-column align-items-start _40-width sm_full-width md_full-width md_align-items-center md_mb-30">
+                <img class="h40 sm_h27" src="assets/svg/logo-3.svg">
                 <h1 class="text-dark-grey font-size-40 font-weight-800 sm_font-size-22 sm_line-height-32 sm_font-size-22 sm_full-width">Skontakuj się z nami!</h1>
-                <p class="mt-15 sm_mt-10 font-size-26 text-dark-grey sm_font-size-10 text-center sm_font-size-16">Jesteśmy dostępni pod adresem:</p>
+                <p class="mt-15 sm_mt-10 font-size-26 text-dark-grey sm_font-size-10 sm_font-size-16">Jesteśmy dostępni pod adresem:</p>
                 <p class="mt-15 sm_mt-10 font-size-20 text-green sm_font-size-14 text-center sm_mb-15">info@drugly.pl</p>
             </div>
             <form action="index.php" method="POST" id="contactForm" class="_60-width bg-dark-grey border-radius-20 justify-content-center sm_full-width">
-                <div class="_85-width flex-column mt-30">
+                <div class="_85-width flex-column mt-30 mb-40">
                     <h3 class="full-width text-green font-size-22 font-weight-bold sm_font-size-14 sm_mb_0">Formularz kontaktowy</h3>
 
                     <input class="h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-30 sm_h30 sm_mt-15" type="text" name="fullname" placeholder="Imię">
@@ -274,11 +273,8 @@ od 40 zł do 60 zł</strong> w zależności od apteki.
                         value="Wysyłam!" name="submit">
 
                     <div class="w470 sm_full-width justify-content-start sm_mt-15">
-                        <label class="font-size-14 align-in-center sm_font-size-10 light-text"><input class="mr-10" type="checkbox"> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
+                        <label class="font-size-14 align-in-center sm_font-size-10 light-text"><input class="mr-10" type="checkbox"><label></label> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
                     </div>
-
-                    <br><br>
-
                 </div>
             </form>
         </section>
