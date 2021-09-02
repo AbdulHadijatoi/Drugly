@@ -36,6 +36,10 @@ body {
     filter: brightness(105%);
 }
 
+.blur-bg {
+    backdrop-filter: blur(2px);
+}
+
 .brightness-110 {
     filter: brightness(110%);
 }

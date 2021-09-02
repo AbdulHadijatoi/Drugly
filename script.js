@@ -79,7 +79,7 @@ $(function() {
 });
 
 $(function() {
-    $('#modal1').hide();
+    // $('#modal1').hide();
     $('#modal2').hide();
     setTimeout(function() {
         $('#modal1').show();

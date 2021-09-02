@@ -44,7 +44,7 @@ if((isset($_POST['submit'])))
 
 <body>
 
-    <div id="modal1" class="full-width full-height align-in-center  position-fixed" style="z-index: 99;">
+    <div id="modal1" class="blur-bg full-width full-height align-in-center  position-fixed" style="z-index: 99;">
         <div class="_90-width margin-auto bg-dark-grey h475 align-in-center position-relative border-radius-30 light-text sm_flex-column">
             <a id="btnModal1" class="cursor-pointer"><img class="w30 position-absolute top-0 right-0 mr-20 mt-20" src="assets/svg/close-ic.svg" alt="close button"></a>
             <div class="mr-140 sm_mr-0"><img class="h73 sm_h45" src="assets/svg/white-ic-4.svg"></div>
@@ -65,7 +65,7 @@ if((isset($_POST['submit'])))
         </div>
     </div>
 
-    <div id="modal2" class="full-width full-height align-in-center  position-fixed bottom-0" style="z-index: 98;">
+    <div id="modal2" class="full-width align-in-center  position-fixed bottom-0" style="z-index: 98;">
         <div class="full-width bg-dark-grey overflow-hidden align-in-center position-absolute bottom-0 h126 sm_h200 light-text sm_flex-column">
             <a class="cursor-pointer" id="btnModal2"><img class="w30 position-absolute top-0 right-0 mr-20 mt-20 sm_w20" src="assets/svg/close-ic.svg" alt="close button"></a>
             <div class="align-in-center sm_flex-column sm_90-width">
