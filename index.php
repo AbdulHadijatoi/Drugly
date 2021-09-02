@@ -1,3 +1,33 @@
+<?php 
+echo $_POST['submit'];
+//   creating connection to database
+$con=mysqli_connect("localhost","root","","druglyDB") or die("couldn't connect to db");
+
+// echo "Submitted";
+
+//check whether submit button is pressed or not
+if((isset($_POST['submit'])))
+{
+    //fetching and storing the form data in variables
+    $fullname = $con->real_escape_string($_POST['fullname']);
+    $email = $con->real_escape_string($_POST['email']);
+    $message = $con->real_escape_string($_POST['message']);
+
+    //query to insert the variable data into the database
+    $sql="INSERT INTO contact (fullname, email, message) VALUES ('".$fullname."','".$email."', '".$message."')";
+
+
+    //Execute the query and returning a message
+    if(!$result = $con->query($sql)){
+        die('Error occured [' . $conn->error . ']');
+    }
+    else{
+        header("Location: thank-you.php");
+
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +39,6 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-
 
 </head>
 
@@ -44,7 +73,7 @@
                 <p class="font-weight-300 line-height-25 font-size-14 sm_font-size-8 sm_text-left sm_mt-10 sm_line-height-20">
                     <span class="font-weight-500 font-size-18">Hej! Ta strona korzysta z ciasteczek.</span> <br>Korzystając z naszej strony internetowej, bez zmiany ustawień przeglądarki, wyrażasz zgodę na przetwarzanie plików cookies na Twoim urządzeniu
                     końcowym.
-                    <br>Możesz wyłączyć ten mechanizm w ustawieniach przeglądarki. Więcej informacji na ten temat znajdziesz w naszym <a class="light-text" href="regulamin.html">Regulaminie i Polityce prywatności</a>.
+                    <br>Możesz wyłączyć ten mechanizm w ustawieniach przeglądarki. Więcej informacji na ten temat znajdziesz w naszym <a class="light-text" href="regulamin.php">Regulaminie i Polityce prywatności</a>.
                 </p>
             </div>
         </div>
@@ -53,7 +82,7 @@
 
     <header class="align-in-center position-fixed z-index-5">
         <div class="content position-relative">
-            <a href="index.html"><img id="topLogo" src="assets/svg/logo-1.svg" alt="logo" height="45.84"></a>
+            <a href="index.php"><img id="topLogo" src="assets/svg/logo-1.svg" alt="logo" height="45.84"></a>
             <div class="_55-width justify-content-end">
                 <ul id="nav" class="justify-content-between full-width sm_display-none">
                     <li><a href="#">O nas</a></li>
@@ -96,6 +125,8 @@
             </div>
         </section>
 
+
+        <!-- begins: dotted lines section -->
         <section class="text-dark-grey">
             <h1 class="full-width font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 text-center">Jak to działa?</h1>
             <p class="full-width text-center font-size-19 text-green mt-20 sm_font-size-14">Zarejestruj się i otrzymaj receptę w 24h!*</p>
@@ -108,8 +139,6 @@
                         <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 z-index-3 position-relative hover-zoom sm_w192 sm_h73 sm_p-10">
                             <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-1.svg"></div>
                             <p class="font-size-19 flex-1 sm_font-size-12">Wypełnij formularz</p>
-                            <!-- <img class="z-index-1 position-absolute top-100p left-40p sm_display-none" src="assets/svg/d-line-1.svg" width="82"> -->
-                            <!-- <img class="z-index-1 position-absolute top-50p _right-82 display-none sm_display-block" src="assets/svg/d-line-3.svg" width="82"> -->
                         </div>
 
                     </div>
@@ -118,17 +147,12 @@
                         <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 mr-140 ml-140 sm_mr-0 sm_ml-0 sm_mt-30 z-index-3 position-relative hover-zoom sm_w192 sm_h73  sm_p-10">
                             <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-2.svg"></div>
                             <p class="font-size-19 flex-1 sm_font-size-12">poprawność danychSystem sprawdzi</p>
-                            <!-- <img class="z-index-1 position-absolute top-50p left-0 _ml-82 sm_display-none" src="assets/svg/d-line-2.svg" width="82">
-                            <img class="z-index-1 position-absolute top-100p left-50p sm_display-none" src="assets/svg/d-line-1.svg" width="82">
-                            <img class="z-index-1 position-absolute top-50p _left-82 display-none sm_display-block" src="assets/svg/d-line-2.svg" width="82"> -->
                         </div>
                     </div>
                     <div class="sm_full-width justify-content-start">
                         <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 sm_mt-30 z-index-3 position-relative hover-zoom sm_w192 sm_h73 sm_p-10">
                             <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div>
                             <p class="font-size-19 flex-1 sm_font-size-12">Dokonaj płatności online</p>
-                            <!-- <img class="z-index-1 position-absolute top-50p left-0 _ml-82 sm_display-none" src="assets/svg/d-line-2.svg" width="82"> -->
-                            <!-- <img class="z-index-1 position-absolute top-50p _right-82 display-none sm_display-block" src="assets/svg/d-line-3.svg" width="82"> -->
                         </div>
                     </div>
                 </div>
@@ -144,14 +168,12 @@
                         <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 sm_mt-30 z-index-3 position-relative sm_w192 sm_h73 sm_p-10">
                             <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-5.svg"></div>
                             <p class="font-size-19 flex-1 sm_font-size-12">zaleceniami medycznymiz e-receptą i wszelkimi Otrzymasz sms oraz mail</p>
-                            <!-- <img class="z-index-1 position-absolute bottom-50p _right-82 display-none sm_display-block" src="assets/svg/d-line-4.svg" width="82"> -->
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </section>
+        <!-- ends: dotted lines section -->
 
         <br><br><br><br><br><br><br><br><br><br>
 
@@ -239,17 +261,17 @@ od 40 zł do 60 zł</strong> w zależności od apteki.
                 <p class="mt-15 sm_mt-10 font-size-26 text-dark-grey sm_font-size-10 text-center sm_font-size-16">Jesteśmy dostępni pod adresem:</p>
                 <p class="mt-15 sm_mt-10 font-size-20 text-green sm_font-size-14 text-center sm_mb-15">info@drugly.pl</p>
             </div>
-            <div id="contactForm" class="_60-width bg-dark-grey border-radius-20 justify-content-center sm_full-width">
+            <form action="index.php" method="POST" id="contactForm" class="_60-width bg-dark-grey border-radius-20 justify-content-center sm_full-width">
                 <div class="_85-width flex-column mt-30">
                     <h3 class="full-width text-green font-size-22 font-weight-bold sm_font-size-14 sm_mb_0">Formularz kontaktowy</h3>
 
-                    <input class="h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-30 sm_h30 sm_mt-15" type="text" placeholder="Imię">
-                    <input class="h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-30 sm_h30 sm_mt-15" type="email" placeholder="Adres e-mail">
+                    <input class="h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-30 sm_h30 sm_mt-15" type="text" name="fullname" placeholder="Imię">
+                    <input class="h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-30 sm_h30 sm_mt-15" type="email" name="email" placeholder="Adres e-mail">
                     <div class="overflow-hidden h56 border-radius-30 align-in-center mt-30 sm_h100 sm_mt-15 sm_border-radious-15">
-                        <textarea class="border-none p-20 overflow-hidden outline-none font-size-18 sm_font-size-10 full-width full-height" type="text" placeholder="Wiadomość"></textarea>
+                        <textarea class="border-none p-20 overflow-hidden outline-none font-size-18 sm_font-size-10 full-width full-height" type="text" name="message" placeholder="Wiadomość"></textarea>
                     </div>
-                    <input class="h56 border-none pl-20 border-radius-30 outline-none bg-green sm_h30 light-text border-none align-in-center cursor-pointer font-size-18 button-effect border-radius-30 mt-30 mb-15 sm_mb_0 sm_mt-0 sm_font-size-16 sm_mt-15 sm_mb-0" type="button"
-                        value="Wysyłam!">
+                    <input class="full-width h56 border-none pl-20 border-radius-30 outline-none bg-green sm_h30 light-text border-none align-in-center cursor-pointer font-size-18 button-effect border-radius-30 mt-30 mb-15 sm_mb_0 sm_mt-0 sm_font-size-16 sm_mt-15 sm_mb-0" type="submit"
+                        value="Wysyłam!" name="submit">
 
                     <div class="w470 sm_full-width justify-content-start sm_mt-15">
                         <label class="font-size-14 align-in-center sm_font-size-10 light-text"><input class="mr-10" type="checkbox"> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
@@ -258,7 +280,7 @@ od 40 zł do 60 zł</strong> w zależności od apteki.
                     <br><br>
 
                 </div>
-            </div>
+            </form>
         </section>
 
     </main>
@@ -270,7 +292,7 @@ od 40 zł do 60 zł</strong> w zależności od apteki.
                 <img class="mr-10 ml-10" src="assets/svg/white-ic-2.svg" width="25">
                 <img src="assets/svg/white-ic-3.svg" width="25">
             </div>
-            <a href="regulamin.html" class="mb-10 mt-10 text-decoration-none light-text">Regulamin i Polityka prywatności</a>
+            <a href="regulamin.php" class="mb-10 mt-10 text-decoration-none light-text">Regulamin i Polityka prywatności</a>
             <p>©Drugly 2021</p>
         </div>
     </footer>
