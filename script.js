@@ -83,14 +83,14 @@ $(function() {
     $('#modal2').hide();
     setTimeout(function() {
         $('#modal1').show();
-        $('#modal2').show();
     }, 30000);
+    setTimeout(function() {
+        $('#modal2').show();
+    }, 1000);
     $('#btnModal1').click(function() {
         $('#modal1').hide();
-        // $('#text2').show();
     });
     $('#btnModal2').click(function() {
         $('#modal2').hide();
-        // $('#text2').show();
     });
 });

@@ -239,5 +239,6 @@ footer .content {
 @media screen and (max-width: 800px) {
     main #cardsContainer {
         background-image: url(assets/svg/m-lines.svg);
+        background-size: 90%;
     }
 }

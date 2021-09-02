@@ -2692,6 +2692,9 @@ a:hover {
     .sm_80-width {
         width: 80%;
     }
+    .sm_85-width {
+        width: 85%;
+    }
     .sm_90-width {
         width: 90% !important;
     }
@@ -2761,6 +2764,9 @@ a:hover {
     .sm_h30 {
         height: 30px !important;
     }
+    .sm_h32 {
+        height: 32px !important;
+    }
     .sm_h37 {
         height: 37px !important;
     }
@@ -2781,6 +2787,9 @@ a:hover {
     }
     .sm_h70 {
         height: 70px !important;
+    }
+    .sm_h73 {
+        height: 73px !important;
     }
     .sm_h80 {
         height: 80px !important;
@@ -3136,8 +3145,17 @@ a:hover {
     .sm_w170 {
         width: 170px;
     }
+    .sm_w17 {
+        width: 17px;
+    }
     .sm_w180 {
         width: 180px;
+    }
+    .sm_w190 {
+        width: 190px;
+    }
+    .sm_w192 {
+        width: 192px;
     }
     .sm_w185 {
         width: 185px;
@@ -3180,6 +3198,9 @@ a:hover {
     }
     .sm_w300 {
         width: 300px;
+    }
+    .sm_w32 {
+        width: 32px;
     }
     .sm_w350 {
         width: 350px;
