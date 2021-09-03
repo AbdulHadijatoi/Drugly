@@ -1,6 +1,6 @@
 <?php 
-// $con=mysqli_connect("localhost","bdrkustp_root","root","bdrkustp_druglyDB") or die("couldn't connect to db");
-$con=mysqli_connect("localhost","root","","druglyDB") or die("couldn't connect to db");
+$con=mysqli_connect("localhost","bdrkustp_root","root","bdrkustp_druglyDB") or die("couldn't connect to db");
+// $con=mysqli_connect("localhost","root","","druglyDB") or die("couldn't connect to db");
 
 if((isset($_POST['submit'])))
 {
