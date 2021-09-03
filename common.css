@@ -32,6 +32,10 @@ body {
     scrollbar-width: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .brightness-105 {
     filter: brightness(105%);
 }

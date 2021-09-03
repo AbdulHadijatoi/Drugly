@@ -1,3 +1,4 @@
+$('#modal1').hide();
 var square = document.querySelectorAll('.square');
 var nav = document.getElementById('nav');
 var mobile_nav = document.getElementById('mobile_nav');
@@ -23,8 +24,6 @@ mobile_nav.onload = function() {
     mobile_nav.innerHTML = nav.innerHTML;
 };
 
-
-// ---------------------------
 // ---------------------------
 var card2 = document.querySelectorAll('.card-2');
 var card3 = document.getElementById('card3');
@@ -80,13 +79,12 @@ $(function() {
 });
 
 $(function() {
-    $('#modal1').hide();
-    $('#modal2').hide();
+    // $('#modal2').hide();
     setTimeout(function() {
-        // $('#modal1').show();
+        $('#modal1').show();
     }, 30000);
     setTimeout(function() {
-        // $('#modal2').show();
+        $('#modal2').show();
     }, 1000);
     $('#btnModal1').click(function() {
         $('#modal1').hide();

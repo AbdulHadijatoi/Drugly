@@ -1,32 +1,32 @@
-<!-- <?php 
-echo $_POST['submit'];
-//   creating connection to database
+<?php 
+// $con=mysqli_connect("localhost","bdrkustp_root","root","bdrkustp_druglyDB") or die("couldn't connect to db");
 $con=mysqli_connect("localhost","root","","druglyDB") or die("couldn't connect to db");
 
-// echo "Submitted";
-
-//check whether submit button is pressed or not
 if((isset($_POST['submit'])))
 {
-    //fetching and storing the form data in variables
-    $fullname = $con->real_escape_string($_POST['fullname']);
     $email = $con->real_escape_string($_POST['email']);
-    $message = $con->real_escape_string($_POST['message']);
+    if(isset($_POST['fullname'])){
+        $fullname = $con->real_escape_string($_POST['fullname']);
+    }else{
+        $fullname = "Subscriber";
+    }
 
-    //query to insert the variable data into the database
+    if(isset($_POST['message'])){
+        $message = $con->real_escape_string($_POST['message']);
+    }else{
+        $message = "-";
+    }
+
     $sql="INSERT INTO contact (fullname, email, message) VALUES ('".$fullname."','".$email."', '".$message."')";
 
-
-    //Execute the query and returning a message
     if(!$result = $con->query($sql)){
         die('Error occured [' . $conn->error . ']');
     }
     else{
         header("Location: thank-you.php");
-
     }
 }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html>
@@ -47,26 +47,26 @@ if((isset($_POST['submit'])))
         <div class="_80-width bg-dark-grey h475 align-in-center position-relative border-radius-30 light-text sm_flex-column">
             <a id="btnModal1" class="cursor-pointer"><img class="w30 position-absolute top-0 right-0 mr-20 mt-20" src="assets/svg/close-ic.svg" alt="close button"></a>
             <div class="mr-140 sm_mr-0"><img class="h73 sm_h45" src="assets/svg/white-ic-4.svg"></div>
-            <div class="flex-column align-items-center sm_90-width sm_mt-15">
+            <form action="index.php" method="POST" class="flex-column align-items-center sm_90-width sm_mt-15">
                 <h1 class="font-size-40 font-weight-800 sm_font-size-20">Ruszamy już wkrótce</h1>
                 <p class="font-weight-400 font-size-22 mb-30 sm_font-size-14 sm_text-align-center sm_mt-10">Zapisz się już dzisiaj i otrzymaj <strong class="text-green font-size-27 sm_font-size-20"> 30% rabatu</strong> na pierwszą wizytę online.
                 </p>
-                <input class="w480 sm_full-width h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-15 sm_h30 sm_mt_0" type="email" placeholder="Adres e-mail">
-                <input class="w480 sm_full-width h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-15 sm_h30 sm_mt-7" type="text" placeholder="Numer telefonu (opcjonalnie)">
+                <input class="w480 sm_full-width h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-15 sm_h30 sm_mt_0" type="email" name="email" placeholder="Adres e-mail" required>
+                <input class="w480 sm_full-width h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-15 sm_h30 sm_mt-7" type="text" name="phone" placeholder="Numer telefonu (opcjonalnie)">
                 <input class="w480 sm_full-width h56 border-none pl-20 border-radius-30 outline-none bg-green sm_h30 light-text border-none align-in-center cursor-pointer font-size-18 button-effect border-radius-30 mt-30 mb-15 sm_mb_0 sm_mt-0 sm_font-size-16 sm_mt-7 sm_mb-0"
-                    type="button" value="Zapisuję się">
+                    type="submit" name="submit" value="Zapisuję się">
 
                 <div class="w470 sm_full-width justify-content-start sm_mt-15">
                     <label class="font-size-14 align-in-center sm_font-size-10 light-text sm_font-size-6"><input class="mr-10 br-1-white bg-transparent" type="checkbox"><label></label> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję
                     je.
                     </label>
                 </div>
-            </div>
+            </form>
             <div class="ml-140 sm_display-none"><img class="h73" src="assets/svg/white-ic-4.svg"></div>
         </div>
     </div>
 
-    <div id="modal2" class="full-width align-in-center  position-fixed bottom-0" style="z-index: 98;">
+    <div id="modal2" class="full-width align-in-center  position-fixed bottom-0 display-none" style="z-index: 98;">
         <div class="full-width bg-dark-grey overflow-hidden align-in-center position-absolute bottom-0 h126 sm_h200 light-text sm_flex-column">
             <a class="cursor-pointer" id="btnModal2"><img class="w30 position-absolute top-0 right-0 mr-20 mt-20 sm_w20" src="assets/svg/close-ic.svg" alt="close button"></a>
             <div class="align-in-center sm_flex-column sm_90-width">
@@ -86,10 +86,10 @@ if((isset($_POST['submit'])))
             <a href="index.php"><img id="topLogo" src="assets/svg/logo-1.svg" alt="logo" height="45.84"></a>
             <div class="_55-width justify-content-end">
                 <ul id="nav" class="justify-content-between full-width sm_display-none">
-                    <li><a href="#">O nas</a></li>
-                    <li><a href="#">Jak to działa?</a></li>
-                    <li><a href="#">Dlaczego Drugly?</a></li>
-                    <li><a href="#">Czy marihuana jest legalna?</a></li>
+                    <li><a href="#onas">O nas</a></li>
+                    <li><a href="#jaktodziała">Jak to działa?</a></li>
+                    <li><a href="#dlaczegodrugly">Dlaczego Drugly?</a></li>
+                    <li><a href="#czy">Czy marihuana jest legalna?</a></li>
                 </ul>
 
                 <img id="btn_mobile_menu" class="display-none sm_display-block cursor-pointer hover-effect" src="assets/svg/ic-mobile-menu.svg" width="30" alt="mobile-menu-icon">
@@ -97,30 +97,31 @@ if((isset($_POST['submit'])))
         </div>
         <ul id="mobile_nav" class="align-items-center full-width flex-column sm_d-flex position-absolute display-none">
             <input type="checkbox" id="mobileNavCheck" class="display-none"><label></label>
-            <li><a href="#">O nas</a></li>
-            <li><a href="#">Jak to działa?</a></li>
-            <li><a href="#">Dlaczego Drugly?</a></li>
-            <li><a href="#">Czy marihuana jest legalna?</a></li>
+            <li><a href="#onas">O nas</a></li>
+            <li><a href="#jaktodziała">Jak to działa?</a></li>
+            <li><a href="#dlaczegodrugly">Dlaczego Drugly?</a></li>
+            <li><a href="#czy">Czy marihuana jest legalna?</a></li>
         </ul>
     </header>
 
     <main class="align-in-center flex-column overflow-hidden">
-        <section class="h800 sm_h750 md_h750 justify-content-between align-items-center sm_flex-column-reverse sm_justify-content-center">
-            <div class="_55-width sm_full-width text-dark-grey">
+        <section id="onas" class="h800 sm_h750 md_h750 justify-content-between align-items-center sm_flex-column-reverse sm_justify-content-center">
+            <form action="index.php" method="POST" class="_55-width sm_full-width text-dark-grey">
                 <h1 class="font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 md_font-size-30">Medyczna marihuana bez wychodzenia z domu!<br>Sprawdź, czy się kwalifikujesz!</h1>
                 <p class="font-size-17 mt-10 sm_font-size-14 sm_line-height-20 md_font-size-16">Drugly to pierwsza w Polsce w pełni digitalowa klinika specjalizująca się w leczeniu medyczną marihuaną. Ruszamy już wkrótce. </p>
                 <p class="font-size-19 text-green mt-20 sm_font-size-14 md_font-size-16">Zapisz się już dziś i otrzymaj <strong class="font-size-22 font-weight-bold sm_font-size-18">30% rabatu</strong> na pierwszą wizytę.</p>
                 <div class="input-box w470 sm_full-width sm_h37 sm_mt-15 sm_mb-5 md_full-width">
-                    <input class="sm_font-size-10" type="email" placeholder="Adres e-mail">
-                    <a class="sm_font-size-12 text-decoration-none" href="#">Zapisuję się!</a>
+                    <input class="sm_font-size-10" type="email" name="email" placeholder="Adres e-mail" required>
+                    <input type="submit" name="submit" class="sm_font-size-12 text-decoration-none" value="Zapisuję się!">
                 </div>
                 <div class="input-box w470 sm_full-width sm_h40 sm_mt-10 sm_mb-5 md_full-width">
-                    <input class="sm_font-size-10" type="text" placeholder="Numer telefony (opcjonalnie)">
+                    <input class="sm_font-size-10" type="text" name="phone" placeholder="Numer telefony (opcjonalnie)">
                 </div>
+                <input type="hidden" name="message" value="subcriber">
                 <div class="w470 sm_full-width justify-content-start sm_mt-15  md_full-width">
                     <label class="font-size-14 align-in-center sm_font-size-8"><input class="mr-10" type="checkbox"><label></label> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
                 </div>
-            </div>
+            </form>
             <div class="_45-width sm_80-width sm_mb-20">
                 <img class="full-width" src="assets/svg/graphic-1.svg" alt="section-1-graphic">
             </div>
@@ -132,61 +133,154 @@ if((isset($_POST['submit'])))
 
 
         <section class="text-dark-grey mt-50 mb-50 sm_mt-10 md_mt-10 md_scale06 sm_scale10 md_mt_25 md_mb_25">
+        <a class="anchor" id="jaktodziała"></a>
+
             <h1 class="full-width font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 text-center">Jak to działa?</h1>
             <p class="full-width text-center font-size-19 text-green mt-10 sm_font-size-16 sm_font-weight-bold sm_mt-0">Zarejestruj się i otrzymaj receptę w 24h!*</p>
             <p class="full-width text-center font-size-17 mt-10 sm_font-size-14 sm_line-height-20 mb-80 sm_mb-30">To prostsze niż myślisz. Bez zbędnych formalności i wychodzenia z domu.</p>
 
-            <div id="cardsContainer" class="full-width flex-column align-items-center">
-                <div class="full-width sm_flex-column justify-content-center align-items-center sm_85-width">
-                    <div class="sm_full-width justify-content-start">
-                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 z-index-3 position-relative hover-zoom sm_w192 sm_h73 sm_p-10">
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-1.svg"></div>
-                            <p class="font-size-19 flex-1 sm_font-size-12">Wypełnij formularz</p>
-                        </div>
+            <div class="full-width flex-column align-items-center">
 
+            <svg class="sm_display-none" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1280 469.5" style="enable-background:new 0 0 1280 469.5;" xml:space="preserve">
+                <foreignObject x="172.1" y="188" width="97.4" height="162.7">
+                    <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                        <img src="assets/svg/d-line-1.svg" width="82">
                     </div>
+                </foreignObject>
+                <foreignObject x="408.5" y="124" width="97.4" height="173.1">
+                    <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                        <img src="assets/svg/d-line-2.svg" width="82">
+                    </div>
+                </foreignObject>
+                <foreignObject x="629.2" y="182.8" width="97.4" height="173.1">
+                    <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                        <img src="assets/svg/d-line-1.svg" width="82">
+                    </div>
+                </foreignObject>
+                <foreignObject x="846.5" y="124" width="97.4" height="173.1">
+                    <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                        <img src="assets/svg/d-line-2.svg" width="82">
+                    </div>
+                </foreignObject>                
+                <foreignObject x="8.7" y="36.1" width="384.6" height="191.6">
+                        <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 z-index-3 position-relative hover-zoom">
+                                <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-1.svg"></div>
+                                <p class="font-size-19 flex-1 sm_font-size-12">Wypełnij formularz</p>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <foreignObject x="447.7" y="36.1" width="384.6" height="191.6">
+                        <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 position-relative hover-zoom">
+                                <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10"><img class="w30 sm_w17" src="assets/svg/ic-2.svg"></div>
+                                <!-- <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-4.svg"></div> -->
+                                <p class="font-size-19 flex-1 sm_font-size-12">Dokonaj płatności online</p>
+                                <!-- <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">System sprawdzi poprawność danych</p> -->
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <foreignObject x="886.7" y="36.1" width="384.6" height="191.6">
+                        <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 z-index-3 position-relative hover-zoom">
+                                <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div>
+                                <!-- <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-2.svg"></div> -->
+                                <p class="font-size-19 flex-1 sm_font-size-12">Otrzymasz sms oraz mail z e-receptą i wszelkimi zaleceniami medycznymi</p>
+                                <!-- <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Dokonaj płatności online</p> -->
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <foreignObject x="669.2" y="241.8" width="384.6" height="191.6">
+                        <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 hover-zoom">
+                                <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10"><img class="w30 sm_w17" src="assets/svg/ic-4.svg"></div>
+                                <!-- <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-5.svg"></div> -->
+                                <p class="font-size-19 flex-1 sm_font-size-12">System sprawdzi poprawność danych</p>
+                                <!-- <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Lekarz dokona diagnozy, a w razie potrzeby skontaktuje się z tobą</p> -->
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <foreignObject x="226.2" y="241.8" width="384.6" height="191.6">
+                        <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 position-relative hover-zoom">
+                                <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10"><img class="w30 sm_w17" src="assets/svg/ic-5.svg"></div>
+                                <!-- <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div> -->
+                                <p class="font-size-19 flex-1 sm_font-size-12">Lekarz dokona diagnozy, a w razie potrzeby skontaktuje się z tobą</p>
+                                <!-- <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Otrzymasz sms oraz mail z e-receptą i wszelkimi zaleceniami medycznymi</p> -->
+                            </div>
+                        </div>
+                    </foreignObject>
+                </svg>
 
-                    <div class="sm_full-width justify-content-end">
-                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 mr-140 ml-140 sm_mr-0 sm_ml-0 sm_mt-20 z-index-3 position-relative hover-zoom sm_w192 sm_h73  sm_p-10">
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 sm_display-none"><img class="w30 sm_w17" src="assets/svg/ic-2.svg"></div>
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-4.svg"></div>
-                            <p class="font-size-19 flex-1 sm_font-size-12 sm_display-none">Dokonaj płatności online</p>
-                            <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">System sprawdzi poprawność danych</p>
+                <svg class="display-none sm_display_block" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 383.9 528" style="enable-background:new 0 0 383.9 528;" xml:space="preserve">
+                <foreignObject x="26.1" y="37.9" width="211.7" height="95.3">
+                        <div xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center position-relative hover-zoom w192 h73 p-10">
+                                <div class="bg-dark-grey align-in-center border-radius-50 mr-10 w32 h32"><img class="w17" src="assets/svg/ic-1.svg"></div>
+                                <p class="flex-1 sm_font-size-12">Wypełnij formularz</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="sm_full-width justify-content-start">
-                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 sm_mt-20 z-index-3 position-relative hover-zoom sm_w192 sm_h73 sm_p-10">
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 sm_display-none"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div>
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-2.svg"></div>
-                            <p class="font-size-19 flex-1 sm_font-size-12 sm_display-none">Otrzymasz sms oraz mail z e-receptą i wszelkimi zaleceniami medycznymi</p>
-                            <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Dokonaj płatności online</p>
+                </foreignObject>
+                <foreignObject x="146.1" y="126.9" width="211.7" height="95.3">
+                        <div xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center position-relative hover-zoom w192 h73 p-10">
+                                <div class="bg-dark-grey align-in-center border-radius-50 mr-10 w32 h32"><img class="w17" src="assets/svg/ic-4.svg"></div>
+                                <p class="flex-1 font-size-12">System sprawdzi poprawność danych</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="full-width align-in-center mt-100 sm_flex-column sm_mt_0 sm_85-width">
-                    <div class="sm_full-width justify-content-end position-relative hover-zoom">
-                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 mr-175 sm_mr-0 sm_mt-20 z-index-3  sm_w192 sm_h73 sm_p-10">
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 sm_display-none"><img class="w30 sm_w17" src="assets/svg/ic-4.svg"></div>
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-5.svg"></div>
-                            <p class="font-size-19 flex-1 sm_font-size-12 sm_display-none">System sprawdzi poprawność danych</p>
-                            <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Lekarz dokona diagnozy, a w razie potrzeby skontaktuje się z tobą</p>
+                </foreignObject>
+                <foreignObject x="26.1" y="215.8" width="211.7" height="95.3">
+                        <div xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center mt-20 position-relative hover-zoom w192 h73 p-10">
+                                <div class="bg-dark-grey align-in-center border-radius-50 mr-10 w32 h32"><img class="w17" src="assets/svg/ic-2.svg"></div>
+                                <p class="flex-1 font-size-12">Dokonaj płatności online</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="sm_full-width justify-content-start sm_overflow-hidden hover-zoom">
-                        <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 sm_mt-20 z-index-3 position-relative sm_w192 sm_h73 sm_p-10">
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 sm_display-none"><img class="w30 sm_w17" src="assets/svg/ic-5.svg"></div>
-                            <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div>
-                            <p class="font-size-19 flex-1 sm_font-size-12 sm_display-none">Lekarz dokona diagnozy, a w razie potrzeby skontaktuje się z tobą</p>
-                            <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Otrzymasz sms oraz mail z e-receptą i wszelkimi zaleceniami medycznymi</p>
+                </foreignObject>
+                <foreignObject x="146.1" y="305.3" width="211.7" height="95.3">
+                        <div xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center mr-0 mt-20 w192 h73 p-10">
+                                <div class="bg-dark-grey align-in-center border-radius-50 mr-10 w32 h32"><img class="w17" src="assets/svg/ic-5.svg"></div>
+                                <p class="flex-1 font-size-12">Lekarz dokona diagnozy, a w razie potrzeby skontaktuje się z tobą</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                </foreignObject>
+                <foreignObject x="30.6" y="394.8" width="211.7" height="95.3">
+                        <div xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center mt-20 position-relative w192 h73 p-10">
+                                <div class="bg-dark-grey align-in-center border-radius-50 mr-10 w32 h32"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div>
+                                <p class="flex-1 font-size-12">Otrzymasz sms oraz mail z e-receptą i wszelkimi zaleceniami medycznymi</p>
+                            </div>
+                        </div>
+                </foreignObject>
+                <foreignObject x="213.9" y="70.9" width="113.8" height="74.7">
+                        <div xmlns="http://www.w3.org/1999/xhtml">
+                            <img src="assets/svg/d-line-1.svg" width="82">
+                        </div>
+                </foreignObject>
+                <foreignObject x="58" y="163.5" width="113.8" height="74.7">
+                        <div xmlns="http://www.w3.org/1999/xhtml">
+                            <img src="assets/svg/d-line-1.svg" width="82">
+                        </div>
+                </foreignObject>
+                <foreignObject x="213.9" y="252" width="113.8" height="74.7">
+                        <div xmlns="http://www.w3.org/1999/xhtml">
+                            <img src="assets/svg/d-line-1.svg" width="82">
+                        </div>
+                </foreignObject>
+                <foreignObject x="213.9" y="380.2" width="113.8" height="74.7">
+                        <div xmlns="http://www.w3.org/1999/xhtml">
+                            <img src="assets/svg/d-line-1.svg" width="82">
+                        </div>
+                </foreignObject>
+                </svg>
             </div>
         </section>
         <!-- ends: dotted lines section -->
 
         <section class="mt-100 sm_mt-50 md_mt_25">
+            <a class="anchor" id="dlaczegodrugly"></a>
             <h1 class="full-width text-dark-grey font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 text-center align-items-center justify-content-center sm_font-size-22 mb-40 sm_mb-20">Dlaczego <img class="m-15 h55 sm_h30 vertical-align-middle sm_m-5" src="assets/svg/logo-2.svg"> ?</h1>
             <div class="cards-2-container justify-content-center">
                 <div id="card21" class="card-2 w260 h230 align-in-center flex-column border-radius-30 box-shadow-5px sm_w100 sm_h90 sm_border-radious-10 opacity-0">
@@ -224,6 +318,7 @@ if((isset($_POST['submit'])))
         </section>
 
         <section class="_80-width justify-content-between mt-50 mb-100 sm_mt-10 sm_mt-80">
+            <a class="anchor" id="czy"></a>
             <div class="_50-width sm_full-width justify-content-start flex-column text-dark-grey">
                 <h1 class="heading1 text-dark-grey font-size-40 font-weight-800 sm_mb-15 sm_font-size-22 sm_line-height-32 sm_font-size-22 md_font-size-22 sm_full-width sm_text-align-center">Czy marihuana jest legalna?</h1>
 
@@ -270,10 +365,10 @@ od 40 zł do 60 zł</strong> w zależności od apteki.
                 <div class="_85-width flex-column mt-30 mb-40">
                     <h3 class="full-width text-green font-size-22 font-weight-bold sm_font-size-14 sm_mb_0">Formularz kontaktowy</h3>
 
-                    <input class="h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-30 sm_h30 sm_mt-15" type="text" name="fullname" placeholder="Imię">
-                    <input class="h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-30 sm_h30 sm_mt-15" type="email" name="email" placeholder="Adres e-mail">
+                    <input class="h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-30 sm_h30 sm_mt-15" type="text" name="fullname" placeholder="Imię" required>
+                    <input class="h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-30 sm_h30 sm_mt-15" type="email" name="email" placeholder="Adres e-mail" required>
                     <div class="overflow-hidden h56 border-radius-30 align-in-center mt-30 sm_h100 sm_mt-15 sm_border-radious-15">
-                        <textarea class="border-none p-20 overflow-hidden outline-none font-size-18 sm_font-size-10 full-width full-height" type="text" name="message" placeholder="Wiadomość"></textarea>
+                        <textarea class="border-none p-20 overflow-hidden outline-none font-size-18 sm_font-size-10 full-width full-height" type="text" name="message" placeholder="Wiadomość" required></textarea>
                     </div>
                     <input class="full-width h56 border-none pl-20 border-radius-30 outline-none bg-green sm_h30 light-text border-none align-in-center cursor-pointer font-size-18 button-effect border-radius-30 mt-30 mb-15 sm_mb_0 sm_mt-0 sm_font-size-16 sm_mt-15 sm_mb-0"
                         type="submit" value="Wysyłam!" name="submit">

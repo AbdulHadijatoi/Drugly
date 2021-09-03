@@ -11,6 +11,12 @@ footer {
     transition: all 0.5s ease;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
 
 /* 
 input[type=checkbox]+label {
@@ -164,7 +170,11 @@ main input[type=checkbox] {
     height: 17px;
 }
 
-main .input-box a {
+main .input-box input[type="submit"]:hover{
+    filter:brightness(110%);
+} 
+
+main .input-box a,main .input-box input[type="submit"] {
     display: flex;
     width: 150px;
     height: 100%;
@@ -172,6 +182,8 @@ main .input-box a {
     align-items: center;
     justify-content: center;
     background-color: var(--green1);
+    border: none;
+    cursor: pointer;
     color: var(--light-text);
 }
 

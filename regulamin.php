@@ -13,7 +13,7 @@
 <body class="bg-dark-grey">
     <header class="align-in-center position-fixed z-index-5" style="background-color: transparent">
         <div class="content position-relative">
-            <img src="assets/svg/logo-1.svg" alt="logo" height="45.84">
+            <a href="index.php"><img src="assets/svg/logo-1.svg" alt="logo" height="45.84"></a>
         </div>
     </header>
 
