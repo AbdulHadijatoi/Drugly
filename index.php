@@ -206,17 +206,17 @@ if((isset($_POST['submit'])))
         </section>
 
         <section id="tableSection" class="_80-width box-shadow-5px align-in-center flex-column text-dark-grey mt-80 mb-100 sm_mt-50 border-radius-20">
-            <div class="bg-dark-grey text-green border-radius-20 full-width h65 justify-content-between font-size-24 sm_font-size-12 md_font-size-16">
+            <div class="bg-dark-grey text-green border-radius-20 full-width h65 justify-content-between font-size-24 sm_font-size-12 md_font-size-12">
                 <div class="text-center _30-width full-height align-in-center sm_33-width">Nasza oferta</div>
                 <div class="text-center _40-width full-height align-in-center sm_33-width" style="border-right: 1px solid rgba(255,255,255,0.4); border-left: 1px solid rgba(255,255,255,0.4);">Przykładowa metoda leczenia</div>
                 <div class="text-center _30-width full-height align-in-center sm_33-width">Dostępność w Drugly</div>
             </div>
-            <div class="align-in-center full-width h130 font-size-24 sm_font-size-12 md_font-size-16 overflow-hidden">
+            <div class="align-in-center full-width h130 font-size-24 md_font-size-12 sm_font-size-12 overflow-hidden">
                 <div class="text-center _30-width full-height align-in-center sm_33-width" style="border-bottom: 1px solid rgba(0,0,0,0.1);">Terapie konopne</div>
                 <div class="text-center _40-width full-height align-in-center sm_33-width" style="border: 1px solid rgba(0,0,0,0.1)">Medyczna marihuana</div>
                 <div class="text-center _30-width full-height align-in-center sm_33-width" style="border-bottom: 1px solid rgba(0,0,0,0.1);"> <img class="w43 sm_w31" src="assets/svg/ic-9.svg"> </div>
             </div>
-            <div class="align-in-center full-width h130 font-size-24 sm_font-size-12 md_font-size-16 overflow-hidden">
+            <div class="align-in-center full-width h130 font-size-24 sm_font-size-12 md_font-size-12 overflow-hidden">
                 <div class="text-center _30-width full-height align-in-center sm_33-width">Inne</div>
                 <div class="text-center _40-width full-height align-in-center sm_33-width" style="border: 1px solid rgba(0,0,0,0.1); border-top: 0px; border-bottom: 0px;">Tabletki antykoncepcyjne, tabletki 72h „po” Leki nasenne oraz inne leki</div>
                 <div class="text-center _30-width full-height align-in-center sm_33-width"> <img class="w43 sm_w31" src="assets/svg/ic-10.svg"> </div>
