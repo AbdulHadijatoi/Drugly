@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
 echo $_POST['submit'];
 //   creating connection to database
 $con=mysqli_connect("localhost","root","","druglyDB") or die("couldn't connect to db");
@@ -26,7 +26,7 @@ if((isset($_POST['submit'])))
 
     }
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html>
@@ -41,9 +41,10 @@ if((isset($_POST['submit'])))
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
-    <div id="modal1" class="blur-bg full-width full-height align-in-center  position-fixed" style="z-index: 99;">
-        <div class="_90-width margin-auto bg-dark-grey h475 align-in-center position-relative border-radius-30 light-text sm_flex-column">
+    <div id="modal1" class="blur-bg full-width full-height align-in-center position-fixed" style="z-index: 99;">
+        <div class="_80-width bg-dark-grey h475 align-in-center position-relative border-radius-30 light-text sm_flex-column">
             <a id="btnModal1" class="cursor-pointer"><img class="w30 position-absolute top-0 right-0 mr-20 mt-20" src="assets/svg/close-ic.svg" alt="close button"></a>
             <div class="mr-140 sm_mr-0"><img class="h73 sm_h45" src="assets/svg/white-ic-4.svg"></div>
             <div class="flex-column align-items-center sm_90-width sm_mt-15">
@@ -56,7 +57,9 @@ if((isset($_POST['submit'])))
                     type="button" value="Zapisuję się">
 
                 <div class="w470 sm_full-width justify-content-start sm_mt-15">
-                    <label class="font-size-14 align-in-center sm_font-size-10 light-text sm_font-size-6"><input class="mr-10 br-1-white bg-transparent" type="checkbox"><label></label> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
+                    <label class="font-size-14 align-in-center sm_font-size-10 light-text sm_font-size-6"><input class="mr-10 br-1-white bg-transparent" type="checkbox"><label></label> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję
+                    je.
+                    </label>
                 </div>
             </div>
             <div class="ml-140 sm_display-none"><img class="h73" src="assets/svg/white-ic-4.svg"></div>
@@ -107,14 +110,14 @@ if((isset($_POST['submit'])))
                 <h1 class="font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 md_font-size-30">Medyczna marihuana bez wychodzenia z domu!<br>Sprawdź, czy się kwalifikujesz!</h1>
                 <p class="font-size-17 mt-10 sm_font-size-14 sm_line-height-20 md_font-size-16">Drugly to pierwsza w Polsce w pełni digitalowa klinika specjalizująca się w leczeniu medyczną marihuaną. Ruszamy już wkrótce. </p>
                 <p class="font-size-19 text-green mt-20 sm_font-size-14 md_font-size-16">Zapisz się już dziś i otrzymaj <strong class="font-size-22 font-weight-bold sm_font-size-18">30% rabatu</strong> na pierwszą wizytę.</p>
-                <div class="input-box w470 sm_full-width sm_h37 sm_mt-15 sm_mb-5 md_w400">
+                <div class="input-box w470 sm_full-width sm_h37 sm_mt-15 sm_mb-5 md_full-width">
                     <input class="sm_font-size-10" type="email" placeholder="Adres e-mail">
                     <a class="sm_font-size-12 text-decoration-none" href="#">Zapisuję się!</a>
                 </div>
-                <div class="input-box w470 sm_full-width sm_h40 sm_mt-10 sm_mb-5 md_w400">
+                <div class="input-box w470 sm_full-width sm_h40 sm_mt-10 sm_mb-5 md_full-width">
                     <input class="sm_font-size-10" type="text" placeholder="Numer telefony (opcjonalnie)">
                 </div>
-                <div class="w470 sm_full-width justify-content-start sm_mt-15  md_w400">
+                <div class="w470 sm_full-width justify-content-start sm_mt-15  md_full-width">
                     <label class="font-size-14 align-in-center sm_font-size-8"><input class="mr-10" type="checkbox"><label></label> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
                 </div>
             </div>
@@ -125,6 +128,9 @@ if((isset($_POST['submit'])))
 
 
         <!-- begins: dotted lines section -->
+
+
+
         <section class="text-dark-grey mt-50 mb-50 sm_mt-10 md_mt-10 md_scale06 sm_scale10 md_mt_25 md_mb_25">
             <h1 class="full-width font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 text-center">Jak to działa?</h1>
             <p class="full-width text-center font-size-19 text-green mt-10 sm_font-size-16 sm_font-weight-bold sm_mt-0">Zarejestruj się i otrzymaj receptę w 24h!*</p>
@@ -256,11 +262,11 @@ od 40 zł do 60 zł</strong> w zależności od apteki.
         <section class="_80-width text-dark-grey justify-content-between md_flex-column mb-100 sm_mb-30 mt-100 sm_mt-10 md_mt_25 md_full-width md_align-items-center">
             <div id="contactDetails" class="flex-column align-items-start _40-width sm_full-width md_full-width md_align-items-center md_mb-30">
                 <img class="h40 sm_h27" src="assets/svg/logo-3.svg">
-                <h1 class="text-dark-grey font-size-40 font-weight-800 sm_font-size-22 sm_line-height-32 sm_font-size-22 sm_full-width">Skontakuj się z nami!</h1>
+                <h1 class="text-dark-grey font-size-40 font-weight-800 sm_font-size-22 sm_line-height-32 sm_font-size-22 sm_full-width sm_text-align-center">Skontakuj się z nami!</h1>
                 <p class="mt-15 sm_mt-10 font-size-26 text-dark-grey sm_font-size-10 sm_font-size-16">Jesteśmy dostępni pod adresem:</p>
                 <p class="mt-15 sm_mt-10 font-size-20 text-green sm_font-size-14 text-center sm_mb-15">info@drugly.pl</p>
             </div>
-            <form action="index.php" method="POST" id="contactForm" class="_60-width bg-dark-grey border-radius-20 justify-content-center sm_full-width">
+            <form action="index.php" method="POST" id="contactForm" class="_60-width bg-dark-grey border-radius-20 justify-content-center sm_90-width md_60-width">
                 <div class="_85-width flex-column mt-30 mb-40">
                     <h3 class="full-width text-green font-size-22 font-weight-bold sm_font-size-14 sm_mb_0">Formularz kontaktowy</h3>
 
@@ -269,8 +275,8 @@ od 40 zł do 60 zł</strong> w zależności od apteki.
                     <div class="overflow-hidden h56 border-radius-30 align-in-center mt-30 sm_h100 sm_mt-15 sm_border-radious-15">
                         <textarea class="border-none p-20 overflow-hidden outline-none font-size-18 sm_font-size-10 full-width full-height" type="text" name="message" placeholder="Wiadomość"></textarea>
                     </div>
-                    <input class="full-width h56 border-none pl-20 border-radius-30 outline-none bg-green sm_h30 light-text border-none align-in-center cursor-pointer font-size-18 button-effect border-radius-30 mt-30 mb-15 sm_mb_0 sm_mt-0 sm_font-size-16 sm_mt-15 sm_mb-0" type="submit"
-                        value="Wysyłam!" name="submit">
+                    <input class="full-width h56 border-none pl-20 border-radius-30 outline-none bg-green sm_h30 light-text border-none align-in-center cursor-pointer font-size-18 button-effect border-radius-30 mt-30 mb-15 sm_mb_0 sm_mt-0 sm_font-size-16 sm_mt-15 sm_mb-0"
+                        type="submit" value="Wysyłam!" name="submit">
 
                     <div class="w470 sm_full-width justify-content-start sm_mt-15">
                         <label class="font-size-14 align-in-center sm_font-size-10 light-text"><input class="mr-10" type="checkbox"><label></label> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>

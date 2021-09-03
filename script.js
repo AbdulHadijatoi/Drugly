@@ -95,3 +95,22 @@ $(function() {
         $('#modal2').hide();
     });
 });
+
+
+let scrollPool = 500;
+
+function resetScrollPool() {
+    scrollPool = 500;
+}
+
+function scrollThrottle(event) {
+    window.requestAnimationFrame(resetScrollPool);
+    if (scrollPool < 0) {
+        return false;
+    }
+    const scrollDistance = event.deltaY * 10;
+    scrollPool = scrollPool - Math.abs(scrollDistance);
+    document.querySelector('main').scrollTop += scrollDistance;
+}
+
+window.addEventListener('wheel', scrollThrottle);
