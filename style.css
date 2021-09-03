@@ -206,7 +206,7 @@ main #para21.inview {
 
 main .heading1,
 main #para21 {
-    transform: translateX(20%);
+    transform: translateX(10%);
     opacity: 0;
 }
 
@@ -214,22 +214,22 @@ main #para11,
 main #para12,
 main #para13,
 main #para31 {
-    transform: translateX(-20%);
+    transform: translateX(-10%);
     opacity: 0;
 }
 
 main #card21 {
-    transform: scale(50%);
-    margin-right: 150px;
+    transform: scale(70%);
+    margin-right: 100px;
 }
 
 main #card23 {
     transform: scale(50%);
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 main #card22 {
-    transform: scale(50%);
+    transform: scale(70%);
 }
 
 main #card22.inview,
@@ -249,11 +249,11 @@ main #contactForm {
 }
 
 main #contactForm {
-    transform: translateY(20%);
+    transform: translateY(10%);
 }
 
 main #contactDetails {
-    transform: translateY(-20%);
+    transform: translateY(-10%);
 }
 
 main .card-2.inview,
