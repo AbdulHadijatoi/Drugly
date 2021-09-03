@@ -288,6 +288,10 @@ html{
 .w20 {
     width: 20px;
 }
+.w17 {
+    width: 17px;
+}
+
 
 .w215 {
     width: 215px;
@@ -295,6 +299,9 @@ html{
 
 .w30 {
     width: 30px;
+}
+.w32 {
+    width: 32px;
 }
 
 .w35 {
@@ -1079,6 +1086,9 @@ html{
 
 .h320 {
     height: 320px;
+}
+.h32 {
+    height: 32px;
 }
 
 .h350 {

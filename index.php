@@ -132,7 +132,7 @@ if((isset($_POST['submit'])))
 
 
 
-        <section class="text-dark-grey mt-50 mb-50 sm_mt-10 md_mt-10 md_scale06 sm_scale10 md_mt_25 md_mb_25">
+        <section class="text-dark-grey mt-50 mb-50 sm_mt-10 md_mt-10 md_mt_25 md_mb_25">
         <a class="anchor" id="jaktodziała"></a>
 
             <h1 class="full-width font-size-47 font-weight-800 sm_font-size-22 sm_line-height-32 text-center">Jak to działa?</h1>
@@ -174,9 +174,7 @@ if((isset($_POST['submit'])))
                         <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
                             <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 position-relative hover-zoom">
                                 <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10"><img class="w30 sm_w17" src="assets/svg/ic-2.svg"></div>
-                                <!-- <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-4.svg"></div> -->
                                 <p class="font-size-19 flex-1 sm_font-size-12">Dokonaj płatności online</p>
-                                <!-- <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">System sprawdzi poprawność danych</p> -->
                             </div>
                         </div>
                     </foreignObject>
@@ -184,9 +182,7 @@ if((isset($_POST['submit'])))
                         <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
                             <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 z-index-3 position-relative hover-zoom">
                                 <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div>
-                                <!-- <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-2.svg"></div> -->
                                 <p class="font-size-19 flex-1 sm_font-size-12">Otrzymasz sms oraz mail z e-receptą i wszelkimi zaleceniami medycznymi</p>
-                                <!-- <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Dokonaj płatności online</p> -->
                             </div>
                         </div>
                     </foreignObject>
@@ -194,9 +190,7 @@ if((isset($_POST['submit'])))
                         <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
                             <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 hover-zoom">
                                 <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10"><img class="w30 sm_w17" src="assets/svg/ic-4.svg"></div>
-                                <!-- <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-5.svg"></div> -->
                                 <p class="font-size-19 flex-1 sm_font-size-12">System sprawdzi poprawność danych</p>
-                                <!-- <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Lekarz dokona diagnozy, a w razie potrzeby skontaktuje się z tobą</p> -->
                             </div>
                         </div>
                     </foreignObject>
@@ -204,76 +198,78 @@ if((isset($_POST['submit'])))
                         <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
                             <div class="wide-card box-shadow-5px border-radius-20 h120 w320 justify-content-start align-items-center p-20 position-relative hover-zoom">
                                 <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10"><img class="w30 sm_w17" src="assets/svg/ic-5.svg"></div>
-                                <!-- <div class="w55 h55 bg-dark-grey align-in-center border-radius-50 mr-10 sm_w32 sm_h32 display-none sm_display-flex"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div> -->
                                 <p class="font-size-19 flex-1 sm_font-size-12">Lekarz dokona diagnozy, a w razie potrzeby skontaktuje się z tobą</p>
-                                <!-- <p class="font-size-19 flex-1 sm_font-size-12 display-none sm_display-block">Otrzymasz sms oraz mail z e-receptą i wszelkimi zaleceniami medycznymi</p> -->
                             </div>
                         </div>
                     </foreignObject>
                 </svg>
 
-                <svg class="display-none sm_display_block" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg class="display-none sm_display-block" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 383.9 528" style="enable-background:new 0 0 383.9 528;" xml:space="preserve">
+
+                <foreignObject x="213.9" y="70.9" width="113.8" height="74.7">
+                        <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                            <img src="assets/svg/m-line-1.svg" width="82">
+                        </div>
+                </foreignObject>
+                <foreignObject x="58" y="163.5" width="113.8" height="74.7">
+                        <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                            <img src="assets/svg/m-line-4.svg" width="82">
+                        </div>
+                </foreignObject>
+                <foreignObject x="213.9" y="252" width="113.8" height="74.7">
+                        <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                            <img src="assets/svg/m-line-1.svg" width="82">
+                        </div>
+                </foreignObject>
+                <foreignObject x="213.9" y="380.2" width="113.8" height="74.7">
+                        <div class="align-in-center full-width full-height" xmlns="http://www.w3.org/1999/xhtml">
+                            <img src="assets/svg/m-line-2.svg" width="82">
+                        </div>
+                </foreignObject>
+
+                
                 <foreignObject x="26.1" y="37.9" width="211.7" height="95.3">
-                        <div xmlns="http://www.w3.org/1999/xhtml">
-                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center position-relative hover-zoom w192 h73 p-10">
+                        <div class="align-in-center full-width full-height p-10" xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center position-relative hover-zoom full-width h73 p-10">
                                 <div class="bg-dark-grey align-in-center border-radius-50 mr-10 w32 h32"><img class="w17" src="assets/svg/ic-1.svg"></div>
-                                <p class="flex-1 sm_font-size-12">Wypełnij formularz</p>
+                                <p class="flex-1 font-size-12">Wypełnij formularz</p>
                             </div>
                         </div>
                 </foreignObject>
                 <foreignObject x="146.1" y="126.9" width="211.7" height="95.3">
-                        <div xmlns="http://www.w3.org/1999/xhtml">
-                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center position-relative hover-zoom w192 h73 p-10">
+                        <div class="align-in-center full-width full-height p-10" xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center position-relative hover-zoom w190 h73 p-10">
                                 <div class="bg-dark-grey align-in-center border-radius-50 mr-10 w32 h32"><img class="w17" src="assets/svg/ic-4.svg"></div>
                                 <p class="flex-1 font-size-12">System sprawdzi poprawność danych</p>
                             </div>
                         </div>
                 </foreignObject>
                 <foreignObject x="26.1" y="215.8" width="211.7" height="95.3">
-                        <div xmlns="http://www.w3.org/1999/xhtml">
-                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center mt-20 position-relative hover-zoom w192 h73 p-10">
+                        <div class="align-in-center full-width full-height p-10" xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center position-relative hover-zoom w190 h73 p-10">
                                 <div class="bg-dark-grey align-in-center border-radius-50 mr-10 w32 h32"><img class="w17" src="assets/svg/ic-2.svg"></div>
                                 <p class="flex-1 font-size-12">Dokonaj płatności online</p>
                             </div>
                         </div>
                 </foreignObject>
                 <foreignObject x="146.1" y="305.3" width="211.7" height="95.3">
-                        <div xmlns="http://www.w3.org/1999/xhtml">
-                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center mr-0 mt-20 w192 h73 p-10">
+                        <div class="align-in-center full-width full-height p-10" xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center mr-0 hover-zoom w190 h73 p-10">
                                 <div class="bg-dark-grey align-in-center border-radius-50 mr-10 w32 h32"><img class="w17" src="assets/svg/ic-5.svg"></div>
                                 <p class="flex-1 font-size-12">Lekarz dokona diagnozy, a w razie potrzeby skontaktuje się z tobą</p>
                             </div>
                         </div>
                 </foreignObject>
                 <foreignObject x="30.6" y="394.8" width="211.7" height="95.3">
-                        <div xmlns="http://www.w3.org/1999/xhtml">
-                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center mt-20 position-relative w192 h73 p-10">
+                        <div class="align-in-center full-width full-height p-10" xmlns="http://www.w3.org/1999/xhtml">
+                            <div class="wide-card box-shadow-5px border-radius-20 justify-content-start align-items-center position-relative hover-zoom w190 h73 p-10">
                                 <div class="bg-dark-grey align-in-center border-radius-50 mr-10 w32 h32"><img class="w30 sm_w17" src="assets/svg/ic-3.svg"></div>
                                 <p class="flex-1 font-size-12">Otrzymasz sms oraz mail z e-receptą i wszelkimi zaleceniami medycznymi</p>
                             </div>
                         </div>
                 </foreignObject>
-                <foreignObject x="213.9" y="70.9" width="113.8" height="74.7">
-                        <div xmlns="http://www.w3.org/1999/xhtml">
-                            <img src="assets/svg/d-line-1.svg" width="82">
-                        </div>
-                </foreignObject>
-                <foreignObject x="58" y="163.5" width="113.8" height="74.7">
-                        <div xmlns="http://www.w3.org/1999/xhtml">
-                            <img src="assets/svg/d-line-1.svg" width="82">
-                        </div>
-                </foreignObject>
-                <foreignObject x="213.9" y="252" width="113.8" height="74.7">
-                        <div xmlns="http://www.w3.org/1999/xhtml">
-                            <img src="assets/svg/d-line-1.svg" width="82">
-                        </div>
-                </foreignObject>
-                <foreignObject x="213.9" y="380.2" width="113.8" height="74.7">
-                        <div xmlns="http://www.w3.org/1999/xhtml">
-                            <img src="assets/svg/d-line-1.svg" width="82">
-                        </div>
-                </foreignObject>
+                
                 </svg>
             </div>
         </section>
