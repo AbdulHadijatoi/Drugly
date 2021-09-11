@@ -1,4 +1,3 @@
-$('#modal1').hide();
 var square = document.querySelectorAll('.square');
 var nav = document.getElementById('nav');
 var mobile_nav = document.getElementById('mobile_nav');
@@ -76,7 +75,7 @@ $(function() {
 $(function() {
     // $('#modal2').hide();
     setTimeout(function() {
-        $('#modal1').show();
+        $('#modal1').css("display", "flex");
     }, 30000);
     setTimeout(function() {
         $('#modal2').show();

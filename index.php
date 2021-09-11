@@ -44,7 +44,7 @@ if((isset($_POST['submit'])))
 </head>
 
 <body>
-    <div id="modal1" class="blur-bg full-width full-height align-in-center position-fixed" style="z-index: 99;">
+    <div id="modal1" class="display-none blur-bg full-width full-height align-in-center position-fixed" style="z-index: 99;">
         <div class="_90-width lnd_90-height bg-dark-grey p-30 align-in-center position-relative border-radius-30 light-text sm_flex-column md_flex-column">
             <a id="btnModal1" class="cursor-pointer"><img class="w30 position-absolute top-0 right-0 mr-20 mt-20" src="assets/svg/close-ic.svg" alt="close button"></a>
             <div class="mr-140 sm_mr-0 md_mr-0"><img class="h73 sm_h45 lnd_h50" src="assets/svg/white-ic-4.svg"></div>
@@ -58,8 +58,7 @@ if((isset($_POST['submit'])))
                     type="submit" name="submit" value="Zapisuję się"/>
 
                 <div class="w470 sm_full-width justify-content-start sm_mt-15">
-                    <label class="font-size-14 align-in-center sm_font-size-10 light-text sm_font-size-6"><input class="mr-10 saturate0" type="checkbox"/> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję
-                    je.
+                    <label class="font-size-14 align-in-center sm_font-size-10 light-text sm_font-size-6"><input class="mr-10 saturate0" type="checkbox"/> Zapoznałem/am się z <span class="white-space-pre"> </span> <a class="text-decoration-none light-text" href="regulamin.php">Regulaminem</a> i Polityką prywatności i akceptuję je.
                     </label>
                 </div>
             </form>
@@ -120,7 +119,7 @@ if((isset($_POST['submit'])))
                 </div>
                 <input type="hidden" name="message" value="subcriber"/>
                 <div class="w470 sm_full-width justify-content-start sm_mt-15  md_full-width">
-                    <label class="font-size-14 align-in-center sm_font-size-8"><input class="mr-10 saturate0" type="checkbox" required/> Zapoznałem/am się z Regulaminem i Polityką prywatności i akceptuję je.</label>
+                    <label class="font-size-14 align-in-center sm_font-size-8 white-space-pre"><input class="mr-10 saturate0" type="checkbox" required/> Zapoznałem/am się z <a class="text-decoration-none text-dark-grey" href="regulamin.php">Regulaminem </a> i Polityką prywatności i akceptuję je.</label>
                 </div>
             </form>
             <div class="_45-width sm_70-width sm_mb-20 mt-100">
@@ -216,8 +215,8 @@ granicy.</strong> Obecnie w Polsce jedynym importerem konopi medycznych jest sp�
 od 40 zł do 60 zł</strong> w zależności od apteki.
                 </p>
             </div>
-            <div id="card3" class="_40-width box-shadow-5px h500 align-in-center border-radius-20 sm_display-none">
-                <img class="w350 md_w250" src="assets/svg/graphic-2.svg">
+            <div id="card3" class="_40-width box-shadow-5px h500 align-in-center border-radius-20 sm_display-none md_50-width">
+                <img class="w350 md_w200 " src="assets/svg/graphic-2.svg">
             </div>
         </section>
 
