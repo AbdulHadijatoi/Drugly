@@ -2521,38 +2521,53 @@ a:hover {
     .lnd_h40 {
         height: 40px;
     }
+    .lnd_h30 {
+        height: 30px;
+    }
     .lnd_h50 {
         height: 50px;
     }
     .lnd_font-size-25 {
         font-size: 25px;
     }
+    .lnd_font-size-20 {
+        font-size: 20px;
+    }
     .lnd_font-size-15 {
         font-size: 15px;
+    }
+    .lnd_font-size-10 {
+        font-size: 10px;
     }
     .lnd_font-size-16 {
         font-size: 16px;
     }
+    .lnd_font-size-13 {
+        font-size: 13px;
+    }
     .lnd_mt-10 {
         margin-top: 10px;
     }
-    .lnd_mb-15 {
-        margin-bottom: 15px;
+    .lnd_mt-8 {
+        margin-top: 8px;
+    }
+    .lnd_mt-0 {
+        margin-top: 0px;
+    }
+    .lnd_mb-12 {
+        margin-bottom: 12px;
     }
     .lnd_mb-10 {
         margin-bottom: 10px;
+    }
+    .lnd_mb-8 {
+        margin-bottom: 8px;
     }
     .lnd_font-size-12 {
         font-size: 12px;
     }
     .lnd_font-size-18 {
         font-size: 18px;
-    }
-    .lnd_ {
-
-    }
-    .lnd_ {
-
     }
 }
 

@@ -47,14 +47,14 @@ if((isset($_POST['submit'])))
     <div id="modal1" class="display-none blur-bg full-width full-height align-in-center position-fixed" style="z-index: 99;">
         <div class="_90-width lnd_90-height bg-dark-grey p-30 align-in-center position-relative border-radius-30 light-text sm_flex-column md_flex-column">
             <a id="btnModal1" class="cursor-pointer"><img class="w30 position-absolute top-0 right-0 mr-20 mt-20" src="assets/svg/close-ic.svg" alt="close button"></a>
-            <div class="mr-140 sm_mr-0 md_mr-0"><img class="h73 sm_h45 lnd_h50" src="assets/svg/white-ic-4.svg"></div>
-            <form action="index.php" method="POST" class="flex-column align-items-center sm_full-width sm_mt-15">
-                <h1 class="font-size-40 font-weight-800 sm_font-size-20 sm_text-align-center lnd_font-size-25 lnd_mb-10">Ruszamy już wkrótce</h1>
-                <p class="font-weight-400 font-size-22 text-center mb-30 sm_font-size-14 sm_text-align-center sm_mt-10 lnd_font-size-12 lnd_mb-10">Zapisz się już dzisiaj i otrzymaj <strong class="text-green font-size-27 sm_font-size-20 lnd_font-size-18"> 30% rabatu</strong> na pierwszą wizytę online.
+            <div class="mr-140 sm_mr-0 md_mr-0"><img class="h73 sm_h45 lnd_h40" src="assets/svg/white-ic-4.svg"></div>
+            <form action="index.php" method="POST" class="flex-column align-items-center sm_full-width sm_mt-15 lnd_mt-0">
+                <h1 class="font-size-40 font-weight-800 sm_font-size-20 sm_text-align-center lnd_font-size-20 lnd_mb-8 lnd_mt-0">Ruszamy już wkrótce</h1>
+                <p class="font-weight-400 font-size-22 text-center mb-30 sm_font-size-14 sm_text-align-center sm_mt-10 lnd_font-size-10 lnd_mb-8">Zapisz się już dzisiaj i otrzymaj <strong class="text-green font-size-27 sm_font-size-20 lnd_font-size-15"> 30% rabatu</strong> na pierwszą wizytę online.
                 </p>
-                <input class="w480 sm_full-width h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-15 sm_h30 sm_mt_0 lnd_font-size-16 lnd_mt-10 lnd_h40" type="email" name="email" placeholder="Adres e-mail" required/>
-                <input class="w480 sm_full-width h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-15 sm_h30 sm_mt-7 lnd_font-size-16 lnd_mt-10 lnd_h40" type="text" name="phone" placeholder="Numer telefonu (opcjonalnie)"/>
-                <input class="w480 h56 border-none border-radius-30 outline-none bg-green sm_h30 light-text border-none align-in-center cursor-pointer font-size-18 button-effect border-radius-30 mt-30 mb-15 sm_mb_0 sm_mt-0 sm_font-size-16 sm_mt-7 sm_mb-0 sm_full-width lnd_font-size-16 lnd_mt-10 lnd_h40"
+                <input class="w480 sm_full-width h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-15 sm_h30 sm_mt_0 lnd_font-size-13 lnd_mt-8 lnd_h30" type="email" name="email" placeholder="Adres e-mail" required/>
+                <input class="w480 sm_full-width h56 border-none p-10 pl-20 border-radius-30 outline-none font-size-18 sm_font-size-10 mt-15 sm_h30 sm_mt-7 lnd_font-size-13 lnd_mt-8 lnd_h30" type="text" name="phone" placeholder="Numer telefonu (opcjonalnie)"/>
+                <input class="w480 h56 border-none border-radius-30 outline-none bg-green sm_h30 light-text border-none align-in-center cursor-pointer font-size-18 button-effect border-radius-30 mt-30 mb-15 sm_mb_0 sm_mt-0 sm_font-size-16 sm_mt-7 sm_mb-0 sm_full-width lnd_font-size-13 lnd_mt-8 lnd_h30"
                     type="submit" name="submit" value="Zapisuję się"/>
 
                 <div class="w470 sm_full-width justify-content-start sm_mt-15">
