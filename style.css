@@ -18,53 +18,9 @@ a.anchor {
     visibility: hidden;
 }
 
-/* 
-input[type=checkbox]+label {
-    display: block;
-    margin: 0.2em;
-    cursor: pointer;
-    padding: 0.2em;
+foreignObject>div{
+    position: fixed;
 }
-
-input[type=checkbox] {
-    display: none;
-}
-
-input[type=checkbox]+label:before {
-    content: "\2714";
-    border: 0.1em solid #000;
-    border-radius: 0.2em;
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    padding-left: 0.2em;
-    padding-bottom: 0.3em;
-    margin-right: 0.2em;
-    vertical-align: bottom;
-    color: transparent;
-    transition: .2s;
-}
-
-input[type=checkbox]+label:active:before {
-    transform: scale(0);
-}
-
-input[type=checkbox]:checked+label:before {
-    background-color: var(--green1);
-    border-color: var(--green1);
-    color: #fff;
-}
-
-input[type=checkbox]:disabled+label:before {
-    transform: scale(1);
-    border-color: #aaa;
-}
-
-input[type=checkbox]:checked:disabled+label:before {
-    transform: scale(1);
-    background-color: #bfb;
-    border-color: #bfb;
-} */
 
 header,
 footer {
@@ -76,7 +32,7 @@ header {
 }
 
 footer {
-    min-height: 149px;
+    min-height: 130px;
 }
 
 header .content {
@@ -112,7 +68,7 @@ header #mobile_nav li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--dark-grey);
+    /* background-color: var(--dark-grey); */
     height: 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -140,6 +96,15 @@ header.scrolled #topLogo {
     height: 25px;
 }
 
+header.scrolled #mobile_nav li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+header.scrolled #mobile_nav {
+    top: 45px;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
 main section {
     width: 90%;
 }
@@ -156,7 +121,8 @@ main .input-box {
 }
 
 main .input-box input[type="email"],
-main .input-box input[type="text"] {
+main .input-box input[type="text"],
+main .input-box input[type="tel"] {
     flex: 1;
     height: 100%;
     border: none;
@@ -194,105 +160,6 @@ main #cardsContainer {
     background-position: center;
 }
 
-main .card-2,
-main #card3,
-main #card3b,
-main .para,
-main .heading1,
-main #contactDetails,
-main #contactForm {
-    transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-}
-
-main #para11.inview,
-main #para12.inview,
-main #para13.inview,
-main #para31.inview,
-main .heading1.inview,
-main #para21.inview {
-    transform: translateX(0%);
-}
-
-main .heading1,
-main #para21 {
-    transform: translateX(10%);
-    opacity: 0;
-}
-
-main #para11,
-main #para12,
-main #para13,
-main #para31 {
-    transform: translateX(-10%);
-    opacity: 0;
-}
-
-main #card21 {
-    transform: scale(70%);
-    margin-right: 100px;
-}
-
-main #card23 {
-    transform: scale(50%);
-    margin-left: 100px;
-}
-
-main #card22 {
-    transform: scale(70%);
-}
-
-main #card22.inview,
-main #card21.inview,
-main #card23.inview {
-    transform: scale(100%);
-}
-
-main #card21.inview,
-main #card23.inview {
-    margin: 0px;
-}
-
-main #contactDetails,
-main #contactForm {
-    opacity: 0;
-}
-
-main #contactForm {
-    transform: translateY(10%);
-}
-
-main #contactDetails {
-    transform: translateY(-10%);
-}
-
-main .card-2.inview,
-main #card3.inview,
-main #card3b.inview,
-main .para.inview,
-main .heading1.inview {
-    opacity: 1 !important;
-}
-
-main #contactDetails.inview,
-main #contactForm.inview {
-    opacity: 1;
-    transform: translateY(0%);
-}
-
-main #tableSection {
-    transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    transform: rotate3d(-0.1, 1, 0, 90deg);
-}
-
-main #tableSection.inview {
-    transform: rotate3d(0, 1, 0, 0deg);
-}
 
 main .wide-card {
     background-color: var(--light-text);
@@ -311,11 +178,19 @@ footer .content {
     }
 } */
 
-@media screen and (max-width: 800px) {
-    main #cardsContainer {
-        background-image: url(assets/svg/m-lines.svg);
+/* @media screen and (max-width: 800px) { */
+/* @media screen and (max-width: 1000px) and (min-width: 700px) {
+    main #dottedContainer {
+        background-image: url(assets/svg/dm.svg);
         background-size: 100%;
     }
+} */
+
+@media screen and (max-width: 800px) {
+    /* main #dottedContainer {
+        background-image: url(assets/svg/dm.svg);
+        background-size: 100%;
+    } */
     header .content {
         width: 80%;
     }

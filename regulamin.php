@@ -11,7 +11,7 @@
 </head>
 
 <body class="bg-dark-grey">
-    <header class="align-in-center position-fixed z-index-5" style="background-color: transparent">
+    <header class="align-in-center z-index-5" style="background-color: transparent">
         <div class="content position-relative">
             <a href="index.php"><img src="assets/svg/logo-1.svg" alt="logo" height="45.84"></a>
         </div>
@@ -59,12 +59,12 @@
         </section>
     </main>
 
+
     <footer class="align-in-center">
         <div class="content align-in-center flex-column light-text font-weight-400">
             <div class="align-in-center">
-                <img src="assets/svg/white-ic-1.svg" width="25">
-                <img class="mr-10 ml-10" src="assets/svg/white-ic-2.svg" width="25">
-                <img src="assets/svg/white-ic-3.svg" width="25">
+                <a href="https://www.facebook.com/druglyPL"><img class="mr-10 ml-10" src="assets/svg/white-ic-2.svg" width="25"></a>
+                <a href="https://www.instagram.com/drugly.pl/"><img src="assets/svg/white-ic-3.svg" width="25"></a>
             </div>
             <br>
             <p>©Drugly 2021</p>

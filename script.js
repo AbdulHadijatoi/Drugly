@@ -10,19 +10,32 @@ for (const elem of square) {
     elem.style.width = elem.clientWidth + "px";
 }
 
-btn_mobile_menu.addEventListener("click", function() {
+btn_mobile_menu.addEventListener("click", toogleNav);
 
+function toogleNav(){
     mobileNavCheck.click();
     if (mobileNavCheck.checked == true) {
-        mobile_nav.style.height = '200px';
+        mobile_nav.style.height = '160px';
     } else {
         mobile_nav.style.height = '0px';
     }
-});
+}
 
 mobile_nav.onload = function() {
     mobile_nav.innerHTML = nav.innerHTML;
 };
+
+
+window.addEventListener('click', function(e){   
+    if (mobile_nav.contains(e.target) || btn_mobile_menu.contains(e.target)){
+      // Clicked in box
+    } else{
+        if(mobileNavCheck.checked){
+            mobileNavCheck.click();
+        }
+      mobile_nav.style.height = '0px';
+    }
+  });
 
 // ---------------------------
 var card2 = document.querySelectorAll('.card-2');
@@ -52,24 +65,6 @@ observer = new IntersectionObserver(function(entries) {
     }
 });
 
-if (card2.length > 0) {
-    for (let i = 0; i < card2.length; i++) {
-        observer.observe(card2[i]);
-    }
-}
-
-if (para.length > 0) {
-    for (let i = 0; i < para.length; i++) {
-        observer.observe(para[i]);
-    }
-}
-observer.observe(tableSection);
-observer.observe(card3);
-observer.observe(card3b);
-observer.observe(heading1);
-observer.observe(contactForm);
-observer.observe(contactDetails);
-
 
 $(function() {
     $(document).scroll(function() {
@@ -94,21 +89,3 @@ $(function() {
     });
 });
 
-
-let scrollPool = 500;
-
-function resetScrollPool() {
-    scrollPool = 500;
-}
-
-function scrollThrottle(event) {
-    window.requestAnimationFrame(resetScrollPool);
-    if (scrollPool < 0) {
-        return false;
-    }
-    const scrollDistance = event.deltaY * 10;
-    scrollPool = scrollPool - Math.abs(scrollDistance);
-    document.querySelector('main').scrollTop += scrollDistance;
-}
-
-window.addEventListener('wheel', scrollThrottle);
