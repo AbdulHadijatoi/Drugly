@@ -58,7 +58,9 @@ if((isset($_POST['submit'])))
                     type="submit" name="submit" value="Zapisuję się"/>
 
                 <div class="w470 sm_full-width justify-content-start sm_mt-15">
-                    <label class="font-size-14 align-in-center sm_font-size-10 light-text sm_font-size-6"><input class="mr-10 saturate0" type="checkbox"/> Zapoznałem/am się z <span class="white-space-pre"> </span> <a class="text-decoration-none light-text" href="regulamin.php">Regulaminem</a> i Polityką prywatności i akceptuję je.
+                    <input id="checkTerms" name="checkTerms" class="mr-10 saturate0" type="checkbox"/>
+                    <label for="checkTerms" class="font-size-14 sm_font-size-10 light-text sm_font-size-6">
+                         Zapoznałem/am się z <a class="text-decoration-none light-text" href="regulamin.php">Regulaminem</a> i Polityką prywatności i akceptuję je.
                     </label>
                 </div>
             </form>
